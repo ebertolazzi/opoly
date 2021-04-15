@@ -1,0 +1,13 @@
+.. _exhale_define_a00002_1a18d961f4be3a80ce638fecb062ca4857:
+
+Define OPOLY_TYPES
+==================
+
+- Defined in :ref:`file_opoly.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: OPOLY_TYPES

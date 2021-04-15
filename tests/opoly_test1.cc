@@ -7,8 +7,7 @@ using opoly::Legendre;
 
 typedef unsigned Integer;
 typedef double   Real;
-typedef Legendre<Integer,Real> PP;
-typedef Gauss_quadrature<Integer,Real,PP> GaussQ;
+typedef opoly::Gauss_quadrature<Integer,Real> GaussQ;
 
 # include <iostream>
 # include <iomanip>
@@ -20,7 +19,7 @@ using namespace std;
 Integer const NC   = 15;
 Real    const epsi = 0.5/pow(Real(10),Real(NC));
 
-Integer const N = 125;
+Integer const N = 3;
 Real          x[N];
 Real          w[N];
 GaussQ        gq;
