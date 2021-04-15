@@ -1,0 +1,25 @@
+.. _exhale_class_a00011:
+
+Class OPoly
+===========
+
+- Defined in :ref:`file_toolbox_lib_OPoly.m`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public handle``
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: OPoly
+   :members:
+   :protected-members:
+   :undoc-members:

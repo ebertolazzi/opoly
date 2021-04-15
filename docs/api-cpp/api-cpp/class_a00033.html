@@ -1,0 +1,325 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+    <title>Template Class zeros &#8212; Splines v</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/cloud.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/table_styling.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+
+    
+    
+     
+        <script src="../_static/jquery.cookie.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.base.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.js"></script>
+    
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class zeros::interval_type" href="class_a00037.html" />
+    <link rel="prev" title="Template Class poly" href="class_a00009.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             accesskey="C">toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00037.html" title="Class zeros::interval_type"
+             accesskey="N">next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00009.html" title="Template Class poly"
+             accesskey="P">previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../../index.html">Splines</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="library_root.html" accesskey="U">C++ API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Template Class zeros</a></li> 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="template-class-zeros">
+<span id="exhale-class-a00033"></span><h1>Template Class zeros<a class="headerlink" href="#template-class-zeros" title="Permalink to this headline">¶</a>
+</h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_opoly.hh.html#file-opoly-hh"><span class="std std-ref">File opoly.hh</span></a></p></li>
+</ul>
+<section id="nested-relationships">
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Permalink to this headline">¶</a>
+</h2>
+<section id="nested-types">
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Permalink to this headline">¶</a>
+</h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="class_a00037.html#exhale-class-a00037"><span class="std std-ref">Class zeros::interval_type</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a>
+</h2>
+<dl class="cpp class">
+<dt id="_CPPv4I00EN5opoly5zerosE">
+<span id="_CPPv3I00EN5opoly5zerosE"></span><span id="_CPPv2I00EN5opoly5zerosE"></span><span class="pre">template&lt;</span><span class="pre">typename</span> <code class="sig-name descname"><span class="pre">INT</span></code><span class="pre">,</span> <span class="pre">typename</span> <code class="sig-name descname"><span class="pre">REAL</span></code><span class="pre">&gt;</span><br><span class="target" id="a00033"></span><em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">opoly</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">zeros</span></code><a class="headerlink" href="#_CPPv4I00EN5opoly5zerosE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Class computeing the zeros of an orthogonal polynomial</p>
+<p></p>
+<ul class="simple">
+<li><p>INT is a integer type, can be also unsigned</p></li>
+<li><p>REAL is a floating point type, can be float or a high precision number class </p></li>
+</ul>
+
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly5zeros16interval_pointerE">
+<span id="_CPPv3N5opoly5zeros16interval_pointerE"></span><span id="_CPPv2N5opoly5zeros16interval_pointerE"></span><span id="opoly::zeros::interval_pointer"></span><span class="target" id="a00033_1a9dc8cec25c1038086fe6499a8bad48d2"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly5zeros13interval_typeE" title="opoly::zeros::interval_type"><span class="pre">interval_type</span></a> <span class="pre">*</span><code class="sig-name descname"><span class="pre">interval_pointer</span></code><a class="headerlink" href="#_CPPv4N5opoly5zeros16interval_pointerE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly5zeros22interval_const_pointerE">
+<span id="_CPPv3N5opoly5zeros22interval_const_pointerE"></span><span id="_CPPv2N5opoly5zeros22interval_const_pointerE"></span><span id="opoly::zeros::interval_const_pointer"></span><span class="target" id="a00033_1a049d4ec3c040563f1fc8ae997057db5c"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly5zeros13interval_typeE" title="opoly::zeros::interval_type"><span class="pre">interval_type</span></a> <em class="property"><span class="pre">const</span></em> <span class="pre">*</span><code class="sig-name descname"><span class="pre">interval_const_pointer</span></code><a class="headerlink" href="#_CPPv4N5opoly5zeros22interval_const_pointerE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly5zeros18interval_referenceE">
+<span id="_CPPv3N5opoly5zeros18interval_referenceE"></span><span id="_CPPv2N5opoly5zeros18interval_referenceE"></span><span id="opoly::zeros::interval_reference"></span><span class="target" id="a00033_1a2a31b2094d9861381e0cb1bc1b673c0f"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly5zeros13interval_typeE" title="opoly::zeros::interval_type"><span class="pre">interval_type</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">interval_reference</span></code><a class="headerlink" href="#_CPPv4N5opoly5zeros18interval_referenceE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly5zeros24interval_const_referenceE">
+<span id="_CPPv3N5opoly5zeros24interval_const_referenceE"></span><span id="_CPPv2N5opoly5zeros24interval_const_referenceE"></span><span id="opoly::zeros::interval_const_reference"></span><span class="target" id="a00033_1a282ff00cac949c1e5bdb51a461fff657"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly5zeros13interval_typeE" title="opoly::zeros::interval_type"><span class="pre">interval_type</span></a> <em class="property"><span class="pre">const</span></em> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">interval_const_reference</span></code><a class="headerlink" href="#_CPPv4N5opoly5zeros24interval_const_referenceE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N5opoly5zeros11OPOLY_TYPESE3INT4REAL">
+<span id="_CPPv3N5opoly5zeros11OPOLY_TYPESE3INT4REAL"></span><span id="_CPPv2N5opoly5zeros11OPOLY_TYPESE3INT4REAL"></span><span id="opoly::zeros::OPOLY_TYPES__INT.REAL"></span><span class="target" id="a00033_1aa64b3cc3ded8e5d4b5e6f4b79833aeb4"></span><code class="sig-name descname"><span class="pre">OPOLY_TYPES</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I00EN5opoly5zerosE" title="opoly::zeros::INT"><span class="pre">INT</span></a>, <a class="reference internal" href="#_CPPv4I00EN5opoly5zerosE" title="opoly::zeros::REAL"><span class="pre">REAL</span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5opoly5zeros11OPOLY_TYPESE3INT4REAL" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5opoly5zeros5zerosERK4polyI3INT4REALE">
+<span id="_CPPv3N5opoly5zeros5zerosERK4polyI3INT4REALE"></span><span id="_CPPv2N5opoly5zeros5zerosERK4polyI3INT4REALE"></span><span id="opoly::zeros::zeros__poly:INT.REAL:CR"></span><span class="target" id="a00033_1a242c54eaadfa972ee89ed0e22737b259"></span><em class="property"><span class="pre">inline</span></em> <code class="sig-name descname"><span class="pre">zeros</span></code><span class="sig-paren">(</span><a class="reference internal" href="class_a00009.html#_CPPv4I00EN5opoly4polyE" title="opoly::poly"><span class="pre">poly</span></a><span class="pre">&lt;</span><a class="reference internal" href="#_CPPv4I00EN5opoly5zerosE" title="opoly::zeros::INT"><span class="pre">INT</span></a><span class="pre">,</span> <a class="reference internal" href="#_CPPv4I00EN5opoly5zerosE" title="opoly::zeros::REAL"><span class="pre">REAL</span></a><span class="pre">&gt;</span> <em class="property"><span class="pre">const</span></em> <span class="pre">&amp;</span><em><span class="pre">pref</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5opoly5zeros5zerosERK4polyI3INT4REALE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5opoly5zerosD0Ev">
+<span id="_CPPv3N5opoly5zerosD0Ev"></span><span id="_CPPv2N5opoly5zerosD0Ev"></span><span id="opoly::zeros::~zeros"></span><span class="target" id="a00033_1ac0f46db0147fb5178c77541b29f2f7ac"></span><em class="property"><span class="pre">inline</span></em> <code class="sig-name descname"><span class="pre">~zeros</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5opoly5zerosD0Ev" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5opoly5zeros4evalE8int_type15const_reference7pointer">
+<span id="_CPPv3N5opoly5zeros4evalE8int_type15const_reference7pointer"></span><span id="_CPPv2N5opoly5zeros4evalE8int_type15const_reference7pointer"></span><span id="opoly::zeros::eval__int_type.const_reference.pointer"></span><span class="target" id="a00033_1a5ab343062dd9315491f891bb7c8642e2"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">void</span> <code class="sig-name descname"><span class="pre">eval</span></code><span class="sig-paren">(</span><span class="pre">int_type</span> <em><span class="pre">n</span></em>, <span class="pre">const_reference</span> <em><span class="pre">epsi</span></em>, <span class="pre">pointer</span> <em><span class="pre">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5opoly5zeros4evalE8int_type15const_reference7pointer" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+</div>
+<dl class="cpp class">
+<dt id="_CPPv4N5opoly5zeros13interval_typeE">
+<span id="_CPPv3N5opoly5zeros13interval_typeE"></span><span id="_CPPv2N5opoly5zeros13interval_typeE"></span><span id="opoly::zeros::interval_type"></span><span class="target" id="a00037"></span><em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">interval_type</span></code><a class="headerlink" href="#_CPPv4N5opoly5zeros13interval_typeE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N5opoly5zeros13interval_type13interval_typeEv">
+<span id="_CPPv3N5opoly5zeros13interval_type13interval_typeEv"></span><span id="_CPPv2N5opoly5zeros13interval_type13interval_typeEv"></span><span id="opoly::zeros::interval_type::interval_type"></span><span class="target" id="a00037_1adcd5a42346a77874cb24dfc2f9074018"></span><em class="property"><span class="pre">inline</span></em> <code class="sig-name descname"><span class="pre">interval_type</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5opoly5zeros13interval_type13interval_typeEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5opoly5zeros13interval_type13interval_typeE15const_reference15const_reference8int_type8int_type">
+<span id="_CPPv3N5opoly5zeros13interval_type13interval_typeE15const_reference15const_reference8int_type8int_type"></span><span id="_CPPv2N5opoly5zeros13interval_type13interval_typeE15const_reference15const_reference8int_type8int_type"></span><span id="opoly::zeros::interval_type::interval_type__const_reference.const_reference.int_type.int_type"></span><span class="target" id="a00037_1ac3e717b7c30231abded2e5b33a8cc94b"></span><em class="property"><span class="pre">inline</span></em> <code class="sig-name descname"><span class="pre">interval_type</span></code><span class="sig-paren">(</span><span class="pre">const_reference</span> <em><span class="pre">_a</span></em>, <span class="pre">const_reference</span> <em><span class="pre">_b</span></em>, <span class="pre">int_type</span> <em><span class="pre">_sa</span></em>, <span class="pre">int_type</span> <em><span class="pre">_sb</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5opoly5zeros13interval_type13interval_typeE15const_reference15const_reference8int_type8int_type" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5opoly5zeros13interval_type3setE15const_reference15const_reference8int_type8int_type">
+<span id="_CPPv3N5opoly5zeros13interval_type3setE15const_reference15const_reference8int_type8int_type"></span><span id="_CPPv2N5opoly5zeros13interval_type3setE15const_reference15const_reference8int_type8int_type"></span><span id="opoly::zeros::interval_type::set__const_reference.const_reference.int_type.int_type"></span><span class="target" id="a00037_1a3115c604c13062f09e2d96d2771e5408"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">void</span> <code class="sig-name descname"><span class="pre">set</span></code><span class="sig-paren">(</span><span class="pre">const_reference</span> <em><span class="pre">_a</span></em>, <span class="pre">const_reference</span> <em><span class="pre">_b</span></em>, <span class="pre">int_type</span> <em><span class="pre">_sa</span></em>, <span class="pre">int_type</span> <em><span class="pre">_sb</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5opoly5zeros13interval_type3setE15const_reference15const_reference8int_type8int_type" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5opoly5zeros13interval_typeaSERK13interval_type">
+<span id="_CPPv3N5opoly5zeros13interval_typeaSERK13interval_type"></span><span id="_CPPv2N5opoly5zeros13interval_typeaSERK13interval_type"></span><span id="opoly::zeros::interval_type::assign-operator__interval_typeCR"></span><span class="target" id="a00037_1a37d4a1bcc008bdec646b62cf4535175c"></span><em class="property"><span class="pre">inline</span></em> <a class="reference internal" href="#_CPPv4N5opoly5zeros13interval_typeE" title="opoly::zeros::interval_type"><span class="pre">interval_type</span></a> <em class="property"><span class="pre">const</span></em> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">operator=</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly5zeros13interval_typeE" title="opoly::zeros::interval_type"><span class="pre">interval_type</span></a> <em class="property"><span class="pre">const</span></em> <span class="pre">&amp;</span><em><span class="pre">I</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5opoly5zeros13interval_typeaSERK13interval_type" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt id="_CPPv4N5opoly5zeros13interval_type1aE">
+<span id="_CPPv3N5opoly5zeros13interval_type1aE"></span><span id="_CPPv2N5opoly5zeros13interval_type1aE"></span><span id="opoly::zeros::interval_type::a__real_type"></span><span class="target" id="a00037_1af80a731ace5842585310f94aed2f7dd6"></span><span class="pre">real_type</span> <code class="sig-name descname"><span class="pre">a</span></code><a class="headerlink" href="#_CPPv4N5opoly5zeros13interval_type1aE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N5opoly5zeros13interval_type1bE">
+<span id="_CPPv3N5opoly5zeros13interval_type1bE"></span><span id="_CPPv2N5opoly5zeros13interval_type1bE"></span><span id="opoly::zeros::interval_type::b__real_type"></span><span class="target" id="a00037_1a8e78f6ac52df8d8f5a454aae98d35c7c"></span><span class="pre">real_type</span> <code class="sig-name descname"><span class="pre">b</span></code><a class="headerlink" href="#_CPPv4N5opoly5zeros13interval_type1bE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N5opoly5zeros13interval_type2saE">
+<span id="_CPPv3N5opoly5zeros13interval_type2saE"></span><span id="_CPPv2N5opoly5zeros13interval_type2saE"></span><span id="opoly::zeros::interval_type::sa__int_type"></span><span class="target" id="a00037_1ab088ca445916145148e030438376cdca"></span><span class="pre">int_type</span> <code class="sig-name descname"><span class="pre">sa</span></code><a class="headerlink" href="#_CPPv4N5opoly5zeros13interval_type2saE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N5opoly5zeros13interval_type2sbE">
+<span id="_CPPv3N5opoly5zeros13interval_type2sbE"></span><span id="_CPPv2N5opoly5zeros13interval_type2sbE"></span><span id="opoly::zeros::interval_type::sb__int_type"></span><span class="target" id="a00037_1aaa7420ac445ececebce1025ec4173a62"></span><span class="pre">int_type</span> <code class="sig-name descname"><span class="pre">sb</span></code><a class="headerlink" href="#_CPPv4N5opoly5zeros13interval_type2sbE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+</div>
+</dd>
+</dl>
+
+</dd>
+</dl>
+
+</section>
+</section>
+
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="../../index.html" title="../index">
+          <img class="logo" src="../_static/Spline_interpolation.svg" alt="Logo"/>
+        </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+<div class="sphinx-toc sphinxglobaltoc">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ API</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             >toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00037.html" title="Class zeros::interval_type"
+             >next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00009.html" title="Template Class poly"
+             >previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../../index.html">Splines</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="library_root.html" >C++ API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Template Class zeros</a></li> 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Enrico Bertolazzi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>

@@ -1,0 +1,13 @@
+.. _exhale_define_a00002_1a3bca0429c92a6b344585bfd9d80e6ca5:
+
+Define OPOLY_TYPES_FROM_TYPENAME
+================================
+
+- Defined in :ref:`file_opoly.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: OPOLY_TYPES_FROM_TYPENAME

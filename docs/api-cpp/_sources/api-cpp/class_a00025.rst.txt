@@ -1,0 +1,25 @@
+.. _exhale_class_a00025:
+
+Template Class Laguerre
+=======================
+
+- Defined in :ref:`file_opoly.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public opoly::poly< INT, REAL >`` (:ref:`exhale_class_a00009`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: opoly::Laguerre
+   :members:
+   :protected-members:
+   :undoc-members:

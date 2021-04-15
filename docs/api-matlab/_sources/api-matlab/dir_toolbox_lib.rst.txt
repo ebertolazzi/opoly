@@ -1,0 +1,21 @@
+.. _dir_toolbox_lib:
+
+
+Directory lib
+=============
+
+
+|exhale_lsh| :ref:`Parent directory <dir_toolbox>` (``toolbox``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``toolbox/lib``
+
+
+Files
+-----
+
+- :ref:`file_toolbox_lib_CompileOPolyLib.m`
+- :ref:`file_toolbox_lib_OPoly.m`
+
+
