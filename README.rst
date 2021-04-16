@@ -100,8 +100,8 @@ Developer
 | Enrico Bertolazzi
 | Dipartimento di Ingegneria Industriale
 | Università degli Studi di Trento
-| mailto:enrico.bertolazzi@unitn.it (`homepage <www.ing.unitn.it/~bertolaz>`__)
-
+| mailto:enrico.bertolazzi@unitn.it
+| homepage: https://e.bertolazzi.dii.unitn.it
 
 Reference
 ---------
