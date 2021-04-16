@@ -8,7 +8,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
 
-    <title>Class OPoly &#8212; Splines v</title>
+    <title>Class OPoly &#8212; Splines v1.0
+</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/cloud.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -19,6 +20,7 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
     
     
@@ -94,6 +96,7 @@
 <span id="_CPPv35OPoly"></span><span id="_CPPv25OPoly"></span><span id="OPoly"></span><span class="target" id="a00011"></span><em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">OPoly</span></code> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">handle</span><a class="headerlink" href="#_CPPv45OPoly" title="Permalink to this definition">¶</a><br>
 </dt>
 <dd>
+<p>Class storing and managin orthogonal polynomial </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
@@ -107,35 +110,58 @@
 <dt id="_CPPv4N5OPoly4evalE2in2in2in">
 <span id="_CPPv3N5OPoly4evalE2in2in2in"></span><span id="_CPPv2N5OPoly4evalE2in2in2in"></span><span id="OPoly::eval__in.in.in"></span><span class="target" id="a00011_1a56d4b4d98bb10fdf146db3da8f732b12"></span><span class="pre">function</span> <code class="sig-name descname"><span class="pre">eval</span></code><span class="sig-paren">(</span><em><span class="pre">n</span></em>,<em><span class="pre">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5OPoly4evalE2in2in2in" title="Permalink to this definition">¶</a><br>
 </dt>
-<dd></dd>
+<dd>
+<p>Evaluate the polynomial <span class="math notranslate nohighlight">\( p_n(x) \)</span> where <span class="math notranslate nohighlight">\( n \)</span> is the degree of the polynomial. The value <span class="math notranslate nohighlight">\( x \)</span> can be a scalar a vector or a matrix. The result is of the same dimension of <span class="math notranslate nohighlight">\( x \)</span>. </p>
+</dd>
 </dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N5OPoly5eval2E2in2in2in">
 <span id="_CPPv3N5OPoly5eval2E2in2in2in"></span><span id="_CPPv2N5OPoly5eval2E2in2in2in"></span><span id="OPoly::eval2__in.in.in"></span><span class="target" id="a00011_1adbb5302ab676c06eb5392cfcd2731b40"></span><span class="pre">function</span> <code class="sig-name descname"><span class="pre">eval2</span></code><span class="sig-paren">(</span><em><span class="pre">n</span></em>,<em><span class="pre">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5OPoly5eval2E2in2in2in" title="Permalink to this definition">¶</a><br>
 </dt>
-<dd></dd>
+<dd>
+<p>Evaluate the polynomial <span class="math notranslate nohighlight">\( p_n(x) \)</span> and <span class="math notranslate nohighlight">\( p'_n(x) \)</span> where <span class="math notranslate nohighlight">\( n \)</span> is the degree of the polynomial. Moreover a sign variation of the Sturm sequence associated to the recurrence is returned. The value <span class="math notranslate nohighlight">\( x \)</span> can be a scalar a vector or a matrix. The results are of the same dimension of <span class="math notranslate nohighlight">\( x \)</span>. </p>
+</dd>
 </dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N5OPoly8sequenceE2in2in2in">
 <span id="_CPPv3N5OPoly8sequenceE2in2in2in"></span><span id="_CPPv2N5OPoly8sequenceE2in2in2in"></span><span id="OPoly::sequence__in.in.in"></span><span class="target" id="a00011_1a81ac1fa70a7e91ccee7ecb393e79d15f"></span><span class="pre">function</span> <code class="sig-name descname"><span class="pre">sequence</span></code><span class="sig-paren">(</span><em><span class="pre">n</span></em>,<em><span class="pre">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5OPoly8sequenceE2in2in2in" title="Permalink to this definition">¶</a><br>
 </dt>
-<dd></dd>
+<dd>
+<p>Evaluate the sequence <span class="math notranslate nohighlight">\( p_0(x), p_1(x),\ldots, p_n(x) \)</span>. Moreover a sign variation of the Sturm sequence associated to the recurrence is returned. The value <span class="math notranslate nohighlight">\( x \)</span> can be a scalar a vector or a matrix. The results are of the same dimension of <span class="math notranslate nohighlight">\( x \)</span>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">x</span></code> is an <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">x</span> <span class="pre">p</span></code> matrix then <code class="docutils literal notranslate"><span class="pre">PP</span></code> is an array of dimension <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">x</span> <span class="pre">m</span> <span class="pre">x</span> <span class="pre">p</span></code> </p>
+</dd>
 </dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N5OPoly5zerosE2in2in2in">
 <span id="_CPPv3N5OPoly5zerosE2in2in2in"></span><span id="_CPPv2N5OPoly5zerosE2in2in2in"></span><span id="OPoly::zeros__in.in.in"></span><span class="target" id="a00011_1a7725c0f59d3373075ca678242a2df230"></span><span class="pre">function</span> <code class="sig-name descname"><span class="pre">zeros</span></code><span class="sig-paren">(</span><em><span class="pre">n</span></em>,<em><span class="pre">epsi</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5OPoly5zerosE2in2in2in" title="Permalink to this definition">¶</a><br>
 </dt>
-<dd></dd>
+<dd>
+<p>Evaluate all the zeros of the orthogonal polynomial <span class="math notranslate nohighlight">\( p_n(x) \)</span>.</p>
+<p></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code> is the degree of the polynomial</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">epsi</span></code> is the tolerance used in the computation of the zeros </p></li>
+</ul>
+
+</dd>
 </dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N5OPoly5gaussE2in2in2in">
 <span id="_CPPv3N5OPoly5gaussE2in2in2in"></span><span id="_CPPv2N5OPoly5gaussE2in2in2in"></span><span id="OPoly::gauss__in.in.in"></span><span class="target" id="a00011_1a383725bdce56a8c4c6b4870569fd5084"></span><span class="pre">function</span> <code class="sig-name descname"><span class="pre">gauss</span></code><span class="sig-paren">(</span><em><span class="pre">n</span></em>,<em><span class="pre">epsi</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5OPoly5gaussE2in2in2in" title="Permalink to this definition">¶</a><br>
 </dt>
-<dd></dd>
+<dd>
+<p>Evaluate all nodes and weight of the Gauss-Legendre quadrature. The nodes are the zeros of the associated Legendre polynomial</p>
+<p></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code> is the number of interpolation point</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">epsi</span></code> is the tolerance used in the computation of the zeros of the orthogonal polynomial </p></li>
+</ul>
+
+</dd>
 </dl>
 
 </div>
@@ -154,7 +180,7 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
         <p class="logo"><a href="../../index.html" title="../index">
-          <img class="logo" src="../_static/Spline_interpolation.svg" alt="Logo"/>
+          <img class="logo" src="../_static/logo.png" alt="Logo"/>
         </a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>

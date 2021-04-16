@@ -8,7 +8,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
 
-    <title>OPOLY &#8212; Splines v</title>
+    <title>OPoly &#8212; Splines v1.0
+</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
@@ -57,7 +58,7 @@
              accesskey="P">previous</a> &nbsp; &nbsp;</li>
     <li><a href="index.html">Splines</a> &#187;</li>
 
-        <li class="nav-item nav-item-this"><a href="">OPOLY</a></li> 
+        <li class="nav-item nav-item-this"><a href="">OPoly</a></li> 
       </ul>
     </div>
     </div>
@@ -69,9 +70,118 @@
           <div class="body" role="main">
             
   <section id="opoly">
-<h1>OPOLY<a class="headerlink" href="#opoly" title="Permalink to this headline">¶</a>
+<h1>OPoly<a class="headerlink" href="#opoly" title="Permalink to this headline">¶</a>
 </h1>
-<p>A small header only library for the computation of orthogonal polynomial.</p>
+<p><a class="reference external" href="https://www.mathworks.com/matlabcentral/fileexchange/54481-opoly"><img alt="File Exchange" src="https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg"></a></p>
+<p>A small header only library for the computation
+of orthogonal polynomial.</p>
+<p>The supported polynomials are:</p>
+<ul class="simple">
+<li><p>Jacobi</p></li>
+<li><p>Legendre</p></li>
+<li><p>Chebyshev</p></li>
+<li><p>Laguerre</p></li>
+<li><p>Hermite</p></li>
+</ul>
+<p>Moreover the class computes the
+zeros of the polynomilas and weight and nodes of gaussian quadrature.</p>
+<p>Online doc at: <a class="reference external" href="http://ebertolazzi.github.io/opoly/">http://ebertolazzi.github.io/opoly/</a></p>
+<section id="matlab-interface">
+<h2>Matlab Interface<a class="headerlink" href="#matlab-interface" title="Permalink to this headline">¶</a>
+</h2>
+<p>Install the toolbox (download at the
+<a class="reference external" href="https://github.com/ebertolazzi/opoly/releases">link</a>).
+After the installation compile the Toolbox
+in the command windows of Matlab:</p>
+<div class="highlight-matlab notranslate">
+<div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">CompileOPolyLib</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a>
+</h3>
+<p>Instantiate a polynomial</p>
+<div class="highlight-matlab notranslate">
+<div class="highlight"><pre><span></span><span class="c">% kind = 'jacobi', 'legendre', 'chebyshev', 'laguerre', 'hermite'</span><span class="w"></span>
+<span class="n">kind</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">'chebyshev'</span><span class="w"></span>
+<span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">OPoly</span><span class="p">(</span><span class="n">kind</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>special case for Jacobi and Laguerre</p>
+<div class="highlight-matlab notranslate">
+<div class="highlight"><pre><span></span><span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">OPoly</span><span class="p">(</span><span class="s">'jacobi'</span><span class="p">,</span><span class="nb">alpha</span><span class="p">,</span><span class="nb">beta</span><span class="p">);</span><span class="w"></span>
+<span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">OPoly</span><span class="p">(</span><span class="s">'laguerre'</span><span class="p">,</span><span class="nb">alpha</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>After instantiation, the polynomial can be evaluated:</p>
+<div class="highlight-matlab notranslate">
+<div class="highlight"><pre><span></span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c">% polynomial degree</span><span class="w"></span>
+<span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="n">y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">eval</span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>evaluate the polynomial with first derivative
+and sign variations</p>
+<div class="highlight-matlab notranslate">
+<div class="highlight"><pre><span></span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">yp</span><span class="p">,</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">eval2</span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="c">% y  = p(x)</span><span class="w"></span>
+<span class="c">% yp = p'(x)</span><span class="w"></span>
+<span class="c">% s  = sign variaton of the corresponding Sturm sequence</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Its possible to get the complete
+Sturm sequence</p>
+<div class="highlight-matlab notranslate">
+<div class="highlight"><pre><span></span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">sequence</span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="c">% p  = p_0(x), p_2(x), ..., p_n(x)</span><span class="w"></span>
+<span class="c">% s  = sign variaton of the corresponding Sturm sequence</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Its possible to compute the zeros:</p>
+<div class="highlight-matlab notranslate">
+<div class="highlight"><pre><span></span><span class="c">% epsi = tolerance in the zeros computation</span><span class="w"></span>
+<span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">zeros</span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">epsi</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="c">% x = vector with the coordinates of the zeros</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Finally, compute nodes and weigth of Gauss quadrature
+for the interval [-1,1]</p>
+<div class="highlight-matlab notranslate">
+<div class="highlight"><pre><span></span><span class="c">% epsi = tolerance in the zeros computation</span><span class="w"></span>
+<span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">w</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">gauss</span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">epsi</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="c">% x = nodes of the quadrature</span><span class="w"></span>
+<span class="c">% w = weight of the quadrature</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="developer">
+<h3>Developer<a class="headerlink" href="#developer" title="Permalink to this headline">¶</a>
+</h3>
+<div class="line-block">
+<div class="line">Enrico Bertolazzi</div>
+<div class="line">Dipartimento di Ingegneria Industriale</div>
+<div class="line">Università degli Studi di Trento</div>
+<div class="line"><script type="text/javascript">document.write(
+    "<n pynff=\"ersrerapr rkgreany\" uers=\"znvygb:raevpb\056oregbynmmv%40havga\056vg\">znvygb:raevpb<fcna>\056<\057fcna>oregbynmmv<fcna>\100<\057fcna>havga<fcna>\056<\057fcna>vg<\057n>".replace(/[a-zA-Z]/g,
+        function(c){
+            return String.fromCharCode(
+                (c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26
+            );
+        }
+    )
+);</script></div>
+<div class="line">homepage: <a class="reference external" href="https://e.bertolazzi.dii.unitn.it">https://e.bertolazzi.dii.unitn.it</a>
+</div>
+</div>
+</section>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a>
+</h2>
+<p><strong>Walter Gautschi</strong>,
+<em>Orthogonal Polynomials Computation and Approximation</em>
+Oxford University Press, 2004</p>
+</section>
 </section>
 
 
@@ -83,7 +193,7 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
         <p class="logo"><a href="index.html" title="index">
-          <img class="logo" src="_static/Spline_interpolation.svg" alt="Logo"/>
+          <img class="logo" src="_static/logo.png" alt="Logo"/>
         </a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
@@ -98,7 +208,15 @@
 <div class="sphinx-toc sphinxglobaltoc">
 <h3><a href="index.html">Table of Contents</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">OPOLY</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">OPoly</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#matlab-interface">Matlab Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#developer">Developer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="api_cpp.html">C++ Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api_matlab.html">MATLAB Interface</a></li>
 </ul>
@@ -140,7 +258,7 @@
              >previous</a> &nbsp; &nbsp;</li>
     <li><a href="index.html">Splines</a> &#187;</li>
 
-        <li class="nav-item nav-item-this"><a href="">OPOLY</a></li> 
+        <li class="nav-item nav-item-this"><a href="">OPoly</a></li> 
       </ul>
     </div>
     </div>

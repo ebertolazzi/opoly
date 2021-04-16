@@ -8,7 +8,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
 
-    <title>Program Listing for File OPoly.m &#8212; Splines v</title>
+    <title>Program Listing for File OPoly.m &#8212; Splines v1.0
+</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/cloud.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -69,7 +70,12 @@
 </h1>
 <p>↰ <a class="reference internal" href="file_toolbox_lib_OPoly.m.html#file-toolbox-lib-opoly-m"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">toolbox/lib/OPoly.m</span></code>)</p>
 <div class="highlight-MATLAB notranslate">
-<div class="highlight"><pre><span></span><span class="k">classdef</span><span class="w"> </span><span class="n">OPoly</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">handle</span><span class="w"></span>
+<div class="highlight"><pre><span></span><span class="c">%&gt;</span><span class="w"></span>
+<span class="c">%&gt; Class storing and managin orthogonal polynomial</span><span class="w"></span>
+<span class="c">%&gt;</span><span class="w"></span>
+<span class="c">%&gt;</span><span class="w"></span>
+<span class="c">%&gt;</span><span class="w"></span>
+<span class="k">classdef</span><span class="w"> </span><span class="n">OPoly</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">handle</span><span class="w"></span>
 
 <span class="w">  </span><span class="k">properties</span><span class="w"> </span><span class="p">(</span><span class="nb">SetAccess</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">private</span><span class="p">,</span><span class="w"> </span><span class="nb">Hidden</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">true</span><span class="p">)</span><span class="w"></span>
 <span class="w">    </span><span class="n">objectHandle</span><span class="p">;</span><span class="w"> </span><span class="c">% Handle to the underlying C++ class instance</span><span class="w"></span>
@@ -81,40 +87,66 @@
 <span class="w">      </span><span class="c">% kind [, alpha, beta ]</span><span class="w"></span>
 <span class="w">      </span><span class="n">self</span><span class="p">.</span><span class="n">objectHandle</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">OPolyMexWrapper</span><span class="p">(</span><span class="w"> </span><span class="s">'new'</span><span class="p">,</span><span class="w"> </span><span class="nb">varargin</span><span class="p">{:}</span><span class="w">  </span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="k">end</span><span class="w"></span>
-<span class="w">    </span><span class="c">%</span><span class="w"></span>
 <span class="w">    </span><span class="c">% --------------------------------------------------------------------</span><span class="w"></span>
 <span class="w">    </span><span class="c">%</span><span class="w"></span>
 <span class="w">    </span><span class="k">function</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span>self<span class="p">)</span><span class="w"></span>
 <span class="w">      </span><span class="c">% Destroy the C++ class instance</span><span class="w"></span>
 <span class="w">      </span><span class="n">OPolyMexWrapper</span><span class="p">(</span><span class="w"> </span><span class="s">'delete'</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">objectHandle</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="k">end</span><span class="w"></span>
-<span class="w">    </span><span class="c">%</span><span class="w"></span>
 <span class="w">    </span><span class="c">% --------------------------------------------------------------------</span><span class="w"></span>
-<span class="w">    </span><span class="c">%</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; Evaluate the polynomial \f$ p_n(x) \f$ where  \f$ n \f$ is the</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; degree of the polynomial. The value \f$ x \f$ can be a scalar</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; a vector or a matrix. The result is of the same dimension of \f$ x \f$.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
 <span class="w">    </span><span class="k">function</span><span class="w"> </span>P<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">eval</span><span class="p">(</span> self, n, x <span class="p">)</span><span class="w"></span>
 <span class="w">      </span><span class="n">P</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">OPolyMexWrapper</span><span class="p">(</span><span class="w"> </span><span class="s">'eval'</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">objectHandle</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="k">end</span><span class="w"></span>
-<span class="w">    </span><span class="c">%</span><span class="w"></span>
 <span class="w">    </span><span class="c">% --------------------------------------------------------------------</span><span class="w"></span>
-<span class="w">    </span><span class="c">%</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; Evaluate the polynomial \f$ p_n(x) \f$ and \f$ p'_n(x) \f$</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; where \f$ n \f$ is the degree of the polynomial.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; Moreover a sign variation of the Sturm sequence associated</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; to the recurrence is returned.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; The value \f$ x \f$ can be a scalar a vector or a matrix.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; The results are of the same dimension of \f$ x \f$.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
 <span class="w">    </span><span class="k">function</span><span class="w"> </span>[P,Dp,s]<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">eval2</span><span class="p">(</span> self, n, x <span class="p">)</span><span class="w"></span>
 <span class="w">      </span><span class="p">[</span><span class="n">P</span><span class="p">,</span><span class="n">Dp</span><span class="p">,</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">OPolyMexWrapper</span><span class="p">(</span><span class="w"> </span><span class="s">'eval2'</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">objectHandle</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="k">end</span><span class="w"></span>
-<span class="w">    </span><span class="c">%</span><span class="w"></span>
 <span class="w">    </span><span class="c">% --------------------------------------------------------------------</span><span class="w"></span>
-<span class="w">    </span><span class="c">%</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; Evaluate the sequence \f$ p_0(x), p_1(x),\ldots, p_n(x) \f$.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; Moreover a sign variation of the Sturm sequence associated</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; to the recurrence is returned.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; The value \f$ x \f$ can be a scalar a vector or a matrix.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; The results are of the same dimension of \f$ x \f$.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; If `x` is an `m x p` matrix then `PP` is an array of</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; dimension `n x m x p`</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
 <span class="w">    </span><span class="k">function</span><span class="w"> </span>[PP,s]<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">sequence</span><span class="p">(</span> self, n, x <span class="p">)</span><span class="w"></span>
 <span class="w">      </span><span class="p">[</span><span class="n">PP</span><span class="p">,</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">OPolyMexWrapper</span><span class="p">(</span><span class="w"> </span><span class="s">'sequence'</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">objectHandle</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="k">end</span><span class="w"></span>
-<span class="w">    </span><span class="c">%</span><span class="w"></span>
 <span class="w">    </span><span class="c">% --------------------------------------------------------------------</span><span class="w"></span>
-<span class="w">    </span><span class="c">%</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; Evaluate all the zeros of the orthogonal polynomial \f$ p_n(x) \f$.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; - `n` is the degree of the polynomial</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; - `epsi` is the tolerance used in the computation of the zeros</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
 <span class="w">    </span><span class="k">function</span><span class="w"> </span>x<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">zeros</span><span class="p">(</span> self, n, epsi <span class="p">)</span><span class="w"></span>
 <span class="w">      </span><span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">OPolyMexWrapper</span><span class="p">(</span><span class="w"> </span><span class="s">'zeros'</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">objectHandle</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">epsi</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="k">end</span><span class="w"></span>
-<span class="w">    </span><span class="c">%</span><span class="w"></span>
 <span class="w">    </span><span class="c">% --------------------------------------------------------------------</span><span class="w"></span>
-<span class="w">    </span><span class="c">%</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; Evaluate all nodes and weight of the Gauss-Legendre quadrature.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; The nodes are the zeros of the associated Legendre polynomial</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; - `n`    is the number of interpolation point</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; - `epsi` is the tolerance used in the computation of</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;   the zeros of the orthogonal polynomial</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
 <span class="w">    </span><span class="k">function</span><span class="w"> </span>[node,w]<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">gauss</span><span class="p">(</span> self, n, epsi <span class="p">)</span><span class="w"></span>
 <span class="w">      </span><span class="p">[</span><span class="n">node</span><span class="p">,</span><span class="n">w</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">OPolyMexWrapper</span><span class="p">(</span><span class="w"> </span><span class="s">'gauss'</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">objectHandle</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">epsi</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="k">end</span><span class="w"></span>
@@ -133,7 +165,7 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
         <p class="logo"><a href="../../index.html" title="../index">
-          <img class="logo" src="../_static/Spline_interpolation.svg" alt="Logo"/>
+          <img class="logo" src="../_static/logo.png" alt="Logo"/>
         </a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
