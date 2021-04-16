@@ -3,6 +3,15 @@ OPoly
 
 |File Exchange|
 
+**Online doc at:** http://ebertolazzi.github.io/opoly/
+
+**GITHUB homepage:** https://github.com/ebertolazzi/opoly
+
+**MATLAB toolbox:** https://github.com/ebertolazzi/opoly/releases
+
+Introduction
+------------
+
 A small header only library for the computation
 of orthogonal polynomial.
 
@@ -16,8 +25,6 @@ The supported polynomials are:
 
 Moreover the class computes the
 zeros of the polynomilas and weight and nodes of gaussian quadrature.
-
-Online doc at: http://ebertolazzi.github.io/opoly/
 
 Matlab Interface
 ----------------
@@ -94,8 +101,8 @@ for the interval [-1,1]
   % x = nodes of the quadrature
   % w = weight of the quadrature
 
-Developer
-~~~~~~~~~
+Author
+~~~~~~
 
 | Enrico Bertolazzi
 | Dipartimento di Ingegneria Industriale
@@ -104,7 +111,7 @@ Developer
 | homepage: https://e.bertolazzi.dii.unitn.it
 
 Reference
----------
+~~~~~~~~~
 
 **Walter Gautschi**,
 *Orthogonal Polynomials Computation and Approximation*

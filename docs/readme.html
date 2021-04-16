@@ -6,20 +6,24 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OPoly &#8212; OPoly v1.0
 </title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="_static/table_styling.css" />
+    <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
     
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
 
     
     
@@ -37,8 +41,9 @@
         <script src="_static/cloud.js"></script>
     
 
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="C++ Interface" href="api_cpp.html" />
+    <link rel="next" title="C++ API" href="api-cpp/root.html" />
     <link rel="prev" title="OPoly" href="index.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
   </head><body>
@@ -48,10 +53,13 @@
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="index.html" title="Table Of Contents"
-             accesskey="C">toc</a></li>
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li class="right" >
-          <a href="api_cpp.html" title="C++ Interface"
+          <a href="index.html" title="Table Of Contents"
+             accesskey="C">toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="api-cpp/root.html" title="C++ API"
              accesskey="N">next</a> &nbsp; &nbsp;</li>
         <li class="right" >
           <a href="index.html" title="OPoly"
@@ -69,10 +77,16 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="opoly">
+  <div class="section" id="opoly">
 <h1>OPoly<a class="headerlink" href="#opoly" title="Permalink to this headline">¶</a>
 </h1>
 <p><a class="reference external" href="https://www.mathworks.com/matlabcentral/fileexchange/54481-opoly"><img alt="File Exchange" src="https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg"></a></p>
+<p><strong>Online doc at:</strong> <a class="reference external" href="http://ebertolazzi.github.io/opoly/">http://ebertolazzi.github.io/opoly/</a></p>
+<p><strong>GITHUB homepage:</strong> <a class="reference external" href="https://github.com/ebertolazzi/opoly">https://github.com/ebertolazzi/opoly</a></p>
+<p><strong>MATLAB toolbox:</strong> <a class="reference external" href="https://github.com/ebertolazzi/opoly/releases">https://github.com/ebertolazzi/opoly/releases</a></p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a>
+</h2>
 <p>A small header only library for the computation
 of orthogonal polynomial.</p>
 <p>The supported polynomials are:</p>
@@ -85,8 +99,8 @@ of orthogonal polynomial.</p>
 </ul>
 <p>Moreover the class computes the
 zeros of the polynomilas and weight and nodes of gaussian quadrature.</p>
-<p>Online doc at: <a class="reference external" href="http://ebertolazzi.github.io/opoly/">http://ebertolazzi.github.io/opoly/</a></p>
-<section id="matlab-interface">
+</div>
+<div class="section" id="matlab-interface">
 <h2>Matlab Interface<a class="headerlink" href="#matlab-interface" title="Permalink to this headline">¶</a>
 </h2>
 <p>Install the toolbox (download at the
@@ -97,7 +111,7 @@ in the command windows of Matlab:</p>
 <div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">CompileOPolyLib</span><span class="w"></span>
 </pre></div>
 </div>
-<section id="usage">
+<div class="section" id="usage">
 <h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a>
 </h3>
 <p>Instantiate a polynomial</p>
@@ -153,9 +167,9 @@ for the interval [-1,1]</p>
 <span class="c">% w = weight of the quadrature</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="developer">
-<h3>Developer<a class="headerlink" href="#developer" title="Permalink to this headline">¶</a>
+</div>
+<div class="section" id="author">
+<h3>Author<a class="headerlink" href="#author" title="Permalink to this headline">¶</a>
 </h3>
 <div class="line-block">
 <div class="line">Enrico Bertolazzi</div>
@@ -173,16 +187,16 @@ for the interval [-1,1]</p>
 <div class="line">homepage: <a class="reference external" href="https://e.bertolazzi.dii.unitn.it">https://e.bertolazzi.dii.unitn.it</a>
 </div>
 </div>
-</section>
-</section>
-<section id="reference">
-<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a>
-</h2>
+</div>
+<div class="section" id="reference">
+<h3>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a>
+</h3>
 <p><strong>Walter Gautschi</strong>,
 <em>Orthogonal Polynomials Computation and Approximation</em>
 Oxford University Press, 2004</p>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
 
@@ -209,16 +223,12 @@ Oxford University Press, 2004</p>
 <h3><a href="index.html">Table of Contents</a></h3>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">OPoly</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#matlab-interface">Matlab Interface</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#developer">Developer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#matlab-interface">Matlab Interface</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="api_cpp.html">C++ Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api_matlab.html">MATLAB Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-cpp/root.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-matlab/root.html">MATLAB API</a></li>
 </ul>
 </div>
         </div>
@@ -248,10 +258,13 @@ Oxford University Press, 2004</p>
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="index.html" title="Table Of Contents"
-             >toc</a></li>
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
         <li class="right" >
-          <a href="api_cpp.html" title="C++ Interface"
+          <a href="index.html" title="Table Of Contents"
+             >toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="api-cpp/root.html" title="C++ API"
              >next</a> &nbsp; &nbsp;</li>
         <li class="right" >
           <a href="index.html" title="OPoly"
@@ -265,7 +278,7 @@ Oxford University Press, 2004</p>
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Enrico Bertolazzi.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>

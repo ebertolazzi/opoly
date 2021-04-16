@@ -1,0 +1,413 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Class Hermite &#8212; OPoly v1.0
+</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/cloud.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/table_styling.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+     
+        <script src="../_static/jquery.cookie.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.base.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.js"></script>
+    
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Template Class Jacobi" href="class_a00013.html" />
+    <link rel="prev" title="Template Class Gauss_quadrature" href="class_a00041.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             accesskey="C">toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00013.html" title="Template Class Jacobi"
+             accesskey="N">next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00041.html" title="Template Class Gauss_quadrature"
+             accesskey="P">previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">OPoly</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="root.html" accesskey="U">C++ API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Template Class Hermite</a></li> 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="template-class-hermite">
+<span id="exhale-class-a00029"></span><h1>Template Class Hermite<a class="headerlink" href="#template-class-hermite" title="Permalink to this headline">¶</a>
+</h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_opoly.hh.html#file-opoly-hh"><span class="std std-ref">File opoly.hh</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a>
+</h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a>
+</h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">opoly::poly&lt;</span> <span class="pre">INT,</span> <span class="pre">REAL</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="class_a00009.html#exhale-class-a00009"><span class="std std-ref">Template Class poly</span></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a>
+</h2>
+<dl class="cpp class">
+<dt id="_CPPv4I00EN5opoly7HermiteE">
+<span id="_CPPv3I00EN5opoly7HermiteE"></span><span id="_CPPv2I00EN5opoly7HermiteE"></span><span class="pre">template&lt;</span><span class="pre">typename</span> <code class="sig-name descname"><span class="pre">INT</span></code><span class="pre">,</span> <span class="pre">typename</span> <code class="sig-name descname"><span class="pre">REAL</span></code><span class="pre">&gt;</span><br><span class="target" id="a00029"></span><em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">opoly</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">Hermite</span></code> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">opoly</span><span class="pre">::</span><a class="reference internal" href="class_a00009.html#_CPPv4I00EN5opoly4polyE" title="opoly::poly"><span class="pre">poly</span></a><span class="pre">&lt;</span><a class="reference internal" href="#_CPPv4I00EN5opoly7HermiteE" title="opoly::Hermite::INT"><span class="pre">INT</span></a><span class="pre">,</span> <a class="reference internal" href="#_CPPv4I00EN5opoly7HermiteE" title="opoly::Hermite::REAL"><span class="pre">REAL</span></a><span class="pre">&gt;</span><a class="headerlink" href="#_CPPv4I00EN5opoly7HermiteE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Class defining the <a class="reference internal" href="#a00029"><span class="std std-ref">Hermite</span></a> orthogonal polynomial</p>
+<p></p>
+<ul class="simple">
+<li><p>INT is a integer type, can be also unsigned</p></li>
+<li><p>REAL is a floating point type, can be float or a high precision number class </p></li>
+</ul>
+
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly7Hermite8int_typeE">
+<span id="_CPPv3N5opoly7Hermite8int_typeE"></span><span id="_CPPv2N5opoly7Hermite8int_typeE"></span><span id="opoly::Hermite::int_type"></span><span class="target" id="a00029_1a6c56e0de6d05eca58d58e55195d57fe7"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4I00EN5opoly7HermiteE" title="opoly::Hermite::INT"><span class="pre">INT</span></a> <code class="sig-name descname"><span class="pre">int_type</span></code><a class="headerlink" href="#_CPPv4N5opoly7Hermite8int_typeE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly7Hermite11int_pointerE">
+<span id="_CPPv3N5opoly7Hermite11int_pointerE"></span><span id="_CPPv2N5opoly7Hermite11int_pointerE"></span><span id="opoly::Hermite::int_pointer"></span><span class="target" id="a00029_1a4b1441b62bc35b149a4923d8be507604"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly7Hermite8int_typeE" title="opoly::Hermite::int_type"><span class="pre">int_type</span></a> <span class="pre">*</span><code class="sig-name descname"><span class="pre">int_pointer</span></code><a class="headerlink" href="#_CPPv4N5opoly7Hermite11int_pointerE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly7Hermite17int_const_pointerE">
+<span id="_CPPv3N5opoly7Hermite17int_const_pointerE"></span><span id="_CPPv2N5opoly7Hermite17int_const_pointerE"></span><span id="opoly::Hermite::int_const_pointer"></span><span class="target" id="a00029_1aca81fc35fd3dbddcba3fbe8567516b78"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly7Hermite8int_typeE" title="opoly::Hermite::int_type"><span class="pre">int_type</span></a> <em class="property"><span class="pre">const</span></em> <span class="pre">*</span><code class="sig-name descname"><span class="pre">int_const_pointer</span></code><a class="headerlink" href="#_CPPv4N5opoly7Hermite17int_const_pointerE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly7Hermite13int_referenceE">
+<span id="_CPPv3N5opoly7Hermite13int_referenceE"></span><span id="_CPPv2N5opoly7Hermite13int_referenceE"></span><span id="opoly::Hermite::int_reference"></span><span class="target" id="a00029_1a9e5f86f39863bff5b0a463c05f76dc21"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly7Hermite8int_typeE" title="opoly::Hermite::int_type"><span class="pre">int_type</span></a> <code class="sig-name descname"><span class="pre">int_reference</span></code><a class="headerlink" href="#_CPPv4N5opoly7Hermite13int_referenceE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly7Hermite19int_const_referenceE">
+<span id="_CPPv3N5opoly7Hermite19int_const_referenceE"></span><span id="_CPPv2N5opoly7Hermite19int_const_referenceE"></span><span id="opoly::Hermite::int_const_reference"></span><span class="target" id="a00029_1a742765f10b63a2f3f197b8c9315dea63"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly7Hermite8int_typeE" title="opoly::Hermite::int_type"><span class="pre">int_type</span></a> <em class="property"><span class="pre">const</span></em> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">int_const_reference</span></code><a class="headerlink" href="#_CPPv4N5opoly7Hermite19int_const_referenceE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly7Hermite9real_typeE">
+<span id="_CPPv3N5opoly7Hermite9real_typeE"></span><span id="_CPPv2N5opoly7Hermite9real_typeE"></span><span id="opoly::Hermite::real_type"></span><span class="target" id="a00029_1ac3afc7477f0d9d4b5a3008b41a0f8b1b"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4I00EN5opoly7HermiteE" title="opoly::Hermite::REAL"><span class="pre">REAL</span></a> <code class="sig-name descname"><span class="pre">real_type</span></code><a class="headerlink" href="#_CPPv4N5opoly7Hermite9real_typeE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly7Hermite7pointerE">
+<span id="_CPPv3N5opoly7Hermite7pointerE"></span><span id="_CPPv2N5opoly7Hermite7pointerE"></span><span id="opoly::Hermite::pointer"></span><span class="target" id="a00029_1a4a86e9dabfc855dc7d9728dbc6645257"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly7Hermite9real_typeE" title="opoly::Hermite::real_type"><span class="pre">real_type</span></a> <span class="pre">*</span><code class="sig-name descname"><span class="pre">pointer</span></code><a class="headerlink" href="#_CPPv4N5opoly7Hermite7pointerE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly7Hermite13const_pointerE">
+<span id="_CPPv3N5opoly7Hermite13const_pointerE"></span><span id="_CPPv2N5opoly7Hermite13const_pointerE"></span><span id="opoly::Hermite::const_pointer"></span><span class="target" id="a00029_1a581449fdd6112652a54ec047b615e065"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly7Hermite9real_typeE" title="opoly::Hermite::real_type"><span class="pre">real_type</span></a> <em class="property"><span class="pre">const</span></em> <span class="pre">*</span><code class="sig-name descname"><span class="pre">const_pointer</span></code><a class="headerlink" href="#_CPPv4N5opoly7Hermite13const_pointerE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly7Hermite9referenceE">
+<span id="_CPPv3N5opoly7Hermite9referenceE"></span><span id="_CPPv2N5opoly7Hermite9referenceE"></span><span id="opoly::Hermite::reference"></span><span class="target" id="a00029_1a236f5a441c84cd73b366f1b379ad9319"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly7Hermite9real_typeE" title="opoly::Hermite::real_type"><span class="pre">real_type</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">reference</span></code><a class="headerlink" href="#_CPPv4N5opoly7Hermite9referenceE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly7Hermite15const_referenceE">
+<span id="_CPPv3N5opoly7Hermite15const_referenceE"></span><span id="_CPPv2N5opoly7Hermite15const_referenceE"></span><span id="opoly::Hermite::const_reference"></span><span class="target" id="a00029_1add8db13e2ae508eab934b315c9ba5bbf"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly7Hermite9real_typeE" title="opoly::Hermite::real_type"><span class="pre">real_type</span></a> <em class="property"><span class="pre">const</span></em> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">const_reference</span></code><a class="headerlink" href="#_CPPv4N5opoly7Hermite15const_referenceE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N5opoly7Hermite7HermiteEv">
+<span id="_CPPv3N5opoly7Hermite7HermiteEv"></span><span id="_CPPv2N5opoly7Hermite7HermiteEv"></span><span id="opoly::Hermite::Hermite"></span><span class="target" id="a00029_1ab322b87ef53ce5e49490a23519b8e102"></span><em class="property"><span class="pre">inline</span></em> <code class="sig-name descname"><span class="pre">Hermite</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5opoly7Hermite7HermiteEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly7HermiteclE8int_type15const_reference">
+<span id="_CPPv3NK5opoly7HermiteclE8int_type15const_reference"></span><span id="_CPPv2NK5opoly7HermiteclE8int_type15const_reference"></span><span id="opoly::Hermite::call-operator__int_type.const_referenceC"></span><span class="target" id="a00029_1a5aade15454af2f05627a2ede98c665ad"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly7Hermite9real_typeE" title="opoly::Hermite::real_type"><span class="pre">real_type</span></a> <code class="sig-name descname"><span class="pre">operator()</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly7Hermite8int_typeE" title="opoly::Hermite::int_type"><span class="pre">int_type</span></a> <em><span class="pre">n</span></em>, <a class="reference internal" href="#_CPPv4N5opoly7Hermite15const_referenceE" title="opoly::Hermite::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly7HermiteclE8int_type15const_reference" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Evaluate the polynomial</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>n</strong> – <strong>[in]</strong> the degree op the polynomial </p></li>
+<li><p><strong>x</strong> – <strong>[in]</strong> the value at which the polynomial is evaluated </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even">
+<p>the value <span class="math notranslate nohighlight">\( p(x) \)</span> </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly7Hermite4svarE8int_type15const_reference">
+<span id="_CPPv3NK5opoly7Hermite4svarE8int_type15const_reference"></span><span id="_CPPv2NK5opoly7Hermite4svarE8int_type15const_reference"></span><span id="opoly::Hermite::svar__int_type.const_referenceC"></span><span class="target" id="a00029_1a21bde4447bd2596cf0d8f3f1f68b46a7"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly7Hermite8int_typeE" title="opoly::Hermite::int_type"><span class="pre">int_type</span></a> <code class="sig-name descname"><span class="pre">svar</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly7Hermite8int_typeE" title="opoly::Hermite::int_type"><span class="pre">int_type</span></a> <em><span class="pre">n</span></em>, <a class="reference internal" href="#_CPPv4N5opoly7Hermite15const_referenceE" title="opoly::Hermite::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly7Hermite4svarE8int_type15const_reference" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Evaluate the sign variation of the corresponding sturm sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>n</strong> – <strong>[in]</strong> the degree op the polynomial </p></li>
+<li><p><strong>x</strong> – <strong>[in]</strong> the value at which the polynomial is evaluated </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even">
+<p>the number of sign variations </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly7Hermite4evalE8int_type15const_reference9reference">
+<span id="_CPPv3NK5opoly7Hermite4evalE8int_type15const_reference9reference"></span><span id="_CPPv2NK5opoly7Hermite4evalE8int_type15const_reference9reference"></span><span id="opoly::Hermite::eval__int_type.const_reference.referenceC"></span><span class="target" id="a00029_1ac599ae9f40bb20c4acc82e550d47305d"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly7Hermite8int_typeE" title="opoly::Hermite::int_type"><span class="pre">int_type</span></a> <code class="sig-name descname"><span class="pre">eval</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly7Hermite8int_typeE" title="opoly::Hermite::int_type"><span class="pre">int_type</span></a> <em><span class="pre">n</span></em>, <a class="reference internal" href="#_CPPv4N5opoly7Hermite15const_referenceE" title="opoly::Hermite::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em>, <a class="reference internal" href="#_CPPv4N5opoly7Hermite9referenceE" title="opoly::Hermite::reference"><span class="pre">reference</span></a> <em><span class="pre">p</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly7Hermite4evalE8int_type15const_reference9reference" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Evaluate the polynomial and the sign variation of the corresponding sturm sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>n</strong> – <strong>[in]</strong> the degree op the polynomial </p></li>
+<li><p><strong>x</strong> – <strong>[in]</strong> the value at which the polynomial is evaluated </p></li>
+<li><p><strong>p</strong> – <strong>[out]</strong> the value <span class="math notranslate nohighlight">\( p(x) \)</span> </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even">
+<p>the number of sign variations </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly7Hermite4evalE8int_type15const_reference9reference9reference">
+<span id="_CPPv3NK5opoly7Hermite4evalE8int_type15const_reference9reference9reference"></span><span id="_CPPv2NK5opoly7Hermite4evalE8int_type15const_reference9reference9reference"></span><span id="opoly::Hermite::eval__int_type.const_reference.reference.referenceC"></span><span class="target" id="a00029_1aa604b8c4eb994c68677a5992c8965ded"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly7Hermite8int_typeE" title="opoly::Hermite::int_type"><span class="pre">int_type</span></a> <code class="sig-name descname"><span class="pre">eval</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly7Hermite8int_typeE" title="opoly::Hermite::int_type"><span class="pre">int_type</span></a> <em><span class="pre">n</span></em>, <a class="reference internal" href="#_CPPv4N5opoly7Hermite15const_referenceE" title="opoly::Hermite::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em>, <a class="reference internal" href="#_CPPv4N5opoly7Hermite9referenceE" title="opoly::Hermite::reference"><span class="pre">reference</span></a> <em><span class="pre">p</span></em>, <a class="reference internal" href="#_CPPv4N5opoly7Hermite9referenceE" title="opoly::Hermite::reference"><span class="pre">reference</span></a> <em><span class="pre">dp</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly7Hermite4evalE8int_type15const_reference9reference9reference" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Evaluate the polynomial and its derivative. Moreover return the sign variation of the corresponding sturm sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>n</strong> – <strong>[in]</strong> the degree op the polynomial </p></li>
+<li><p><strong>x</strong> – <strong>[in]</strong> the value at which the polynomial is evaluated </p></li>
+<li><p><strong>p</strong> – <strong>[out]</strong> the value <span class="math notranslate nohighlight">\( p(x) \)</span> </p></li>
+<li><p><strong>dp</strong> – <strong>[out]</strong> the value <span class="math notranslate nohighlight">\( p'(x) \)</span> </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even">
+<p>the number of sign variations </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly7Hermite8sequenceE8int_type15const_reference7pointer">
+<span id="_CPPv3NK5opoly7Hermite8sequenceE8int_type15const_reference7pointer"></span><span id="_CPPv2NK5opoly7Hermite8sequenceE8int_type15const_reference7pointer"></span><span id="opoly::Hermite::sequence__int_type.const_reference.pointerC"></span><span class="target" id="a00029_1a8858cf63f801fde525d1e2bd67b50722"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly7Hermite8int_typeE" title="opoly::Hermite::int_type"><span class="pre">int_type</span></a> <code class="sig-name descname"><span class="pre">sequence</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly7Hermite8int_typeE" title="opoly::Hermite::int_type"><span class="pre">int_type</span></a> <em><span class="pre">n</span></em>, <a class="reference internal" href="#_CPPv4N5opoly7Hermite15const_referenceE" title="opoly::Hermite::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em>, <a class="reference internal" href="#_CPPv4N5opoly7Hermite7pointerE" title="opoly::Hermite::pointer"><span class="pre">pointer</span></a> <em><span class="pre">p</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly7Hermite8sequenceE8int_type15const_reference7pointer" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Evaluate the Sturm sequence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>n</strong> – <strong>[in]</strong> the degree of the polynomial </p></li>
+<li><p><strong>x</strong> – <strong>[in]</strong> the value at which the polynomial is evaluated </p></li>
+<li><p><strong>pvec</strong> – <strong>[out]</strong> the sequence <span class="math notranslate nohighlight">\( p_0(x) \)</span>, <span class="math notranslate nohighlight">\( p_1(x) \)</span>, …, <span class="math notranslate nohighlight">\( p_n(x) \)</span> of the 3 term recurrence </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even">
+<p>the number of sign variations </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly7Hermite6weightE15const_reference">
+<span id="_CPPv3NK5opoly7Hermite6weightE15const_reference"></span><span id="_CPPv2NK5opoly7Hermite6weightE15const_reference"></span><span id="opoly::Hermite::weight__const_referenceC"></span><span class="target" id="a00029_1a5c8675a729fc0172e77a9603f88344c3"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly7Hermite9real_typeE" title="opoly::Hermite::real_type"><span class="pre">real_type</span></a> <code class="sig-name descname"><span class="pre">weight</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly7Hermite15const_referenceE" title="opoly::Hermite::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly7Hermite6weightE15const_reference" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Weight function of the orthogonal polynomial </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<p><strong>x</strong> – <strong>[in]</strong> the value at which the weight is evaluated </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+</div>
+</dd>
+</dl>
+
+</div>
+</div>
+
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="../index.html" title="index">
+          <img class="logo" src="../_static/logo.png" alt="Logo"/>
+        </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+<div class="sphinx-toc sphinxglobaltoc">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">OPoly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="root.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-matlab/root.html">MATLAB API</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             >toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00013.html" title="Template Class Jacobi"
+             >next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00041.html" title="Template Class Gauss_quadrature"
+             >previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">OPoly</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="root.html" >C++ API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Template Class Hermite</a></li> 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Enrico Bertolazzi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>

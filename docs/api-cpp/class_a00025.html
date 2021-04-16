@@ -1,0 +1,413 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Class Laguerre &#8212; OPoly v1.0
+</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/cloud.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/table_styling.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+     
+        <script src="../_static/jquery.cookie.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.base.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.js"></script>
+    
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Template Class Legendre" href="class_a00017.html" />
+    <link rel="prev" title="Template Class Jacobi" href="class_a00013.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             accesskey="C">toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00017.html" title="Template Class Legendre"
+             accesskey="N">next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00013.html" title="Template Class Jacobi"
+             accesskey="P">previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">OPoly</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="root.html" accesskey="U">C++ API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Template Class Laguerre</a></li> 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="template-class-laguerre">
+<span id="exhale-class-a00025"></span><h1>Template Class Laguerre<a class="headerlink" href="#template-class-laguerre" title="Permalink to this headline">¶</a>
+</h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_opoly.hh.html#file-opoly-hh"><span class="std std-ref">File opoly.hh</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a>
+</h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a>
+</h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">opoly::poly&lt;</span> <span class="pre">INT,</span> <span class="pre">REAL</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="class_a00009.html#exhale-class-a00009"><span class="std std-ref">Template Class poly</span></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a>
+</h2>
+<dl class="cpp class">
+<dt id="_CPPv4I00EN5opoly8LaguerreE">
+<span id="_CPPv3I00EN5opoly8LaguerreE"></span><span id="_CPPv2I00EN5opoly8LaguerreE"></span><span class="pre">template&lt;</span><span class="pre">typename</span> <code class="sig-name descname"><span class="pre">INT</span></code><span class="pre">,</span> <span class="pre">typename</span> <code class="sig-name descname"><span class="pre">REAL</span></code><span class="pre">&gt;</span><br><span class="target" id="a00025"></span><em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">opoly</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">Laguerre</span></code> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">opoly</span><span class="pre">::</span><a class="reference internal" href="class_a00009.html#_CPPv4I00EN5opoly4polyE" title="opoly::poly"><span class="pre">poly</span></a><span class="pre">&lt;</span><a class="reference internal" href="#_CPPv4I00EN5opoly8LaguerreE" title="opoly::Laguerre::INT"><span class="pre">INT</span></a><span class="pre">,</span> <a class="reference internal" href="#_CPPv4I00EN5opoly8LaguerreE" title="opoly::Laguerre::REAL"><span class="pre">REAL</span></a><span class="pre">&gt;</span><a class="headerlink" href="#_CPPv4I00EN5opoly8LaguerreE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Class defining the <a class="reference internal" href="#a00025"><span class="std std-ref">Laguerre</span></a> orthogonal polynomial</p>
+<p></p>
+<ul class="simple">
+<li><p>INT is a integer type, can be also unsigned</p></li>
+<li><p>REAL is a floating point type, can be float or a high precision number class </p></li>
+</ul>
+
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly8Laguerre8int_typeE">
+<span id="_CPPv3N5opoly8Laguerre8int_typeE"></span><span id="_CPPv2N5opoly8Laguerre8int_typeE"></span><span id="opoly::Laguerre::int_type"></span><span class="target" id="a00025_1ad86d9a187e919da3f37673fc473426ea"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4I00EN5opoly8LaguerreE" title="opoly::Laguerre::INT"><span class="pre">INT</span></a> <code class="sig-name descname"><span class="pre">int_type</span></code><a class="headerlink" href="#_CPPv4N5opoly8Laguerre8int_typeE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly8Laguerre11int_pointerE">
+<span id="_CPPv3N5opoly8Laguerre11int_pointerE"></span><span id="_CPPv2N5opoly8Laguerre11int_pointerE"></span><span id="opoly::Laguerre::int_pointer"></span><span class="target" id="a00025_1aea3f71d25ca3864c9ba52cfd639d237c"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly8Laguerre8int_typeE" title="opoly::Laguerre::int_type"><span class="pre">int_type</span></a> <span class="pre">*</span><code class="sig-name descname"><span class="pre">int_pointer</span></code><a class="headerlink" href="#_CPPv4N5opoly8Laguerre11int_pointerE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly8Laguerre17int_const_pointerE">
+<span id="_CPPv3N5opoly8Laguerre17int_const_pointerE"></span><span id="_CPPv2N5opoly8Laguerre17int_const_pointerE"></span><span id="opoly::Laguerre::int_const_pointer"></span><span class="target" id="a00025_1aee7168016351cfff364072c063b90a4f"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly8Laguerre8int_typeE" title="opoly::Laguerre::int_type"><span class="pre">int_type</span></a> <em class="property"><span class="pre">const</span></em> <span class="pre">*</span><code class="sig-name descname"><span class="pre">int_const_pointer</span></code><a class="headerlink" href="#_CPPv4N5opoly8Laguerre17int_const_pointerE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly8Laguerre13int_referenceE">
+<span id="_CPPv3N5opoly8Laguerre13int_referenceE"></span><span id="_CPPv2N5opoly8Laguerre13int_referenceE"></span><span id="opoly::Laguerre::int_reference"></span><span class="target" id="a00025_1a144a42a6e76ad76bb2901a0b19fe7547"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly8Laguerre8int_typeE" title="opoly::Laguerre::int_type"><span class="pre">int_type</span></a> <code class="sig-name descname"><span class="pre">int_reference</span></code><a class="headerlink" href="#_CPPv4N5opoly8Laguerre13int_referenceE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly8Laguerre19int_const_referenceE">
+<span id="_CPPv3N5opoly8Laguerre19int_const_referenceE"></span><span id="_CPPv2N5opoly8Laguerre19int_const_referenceE"></span><span id="opoly::Laguerre::int_const_reference"></span><span class="target" id="a00025_1a6630e7408bc9a0a3ab2a5d47782fe362"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly8Laguerre8int_typeE" title="opoly::Laguerre::int_type"><span class="pre">int_type</span></a> <em class="property"><span class="pre">const</span></em> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">int_const_reference</span></code><a class="headerlink" href="#_CPPv4N5opoly8Laguerre19int_const_referenceE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly8Laguerre9real_typeE">
+<span id="_CPPv3N5opoly8Laguerre9real_typeE"></span><span id="_CPPv2N5opoly8Laguerre9real_typeE"></span><span id="opoly::Laguerre::real_type"></span><span class="target" id="a00025_1ab4dc8679da88ed1bec16b0dded624e2d"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4I00EN5opoly8LaguerreE" title="opoly::Laguerre::REAL"><span class="pre">REAL</span></a> <code class="sig-name descname"><span class="pre">real_type</span></code><a class="headerlink" href="#_CPPv4N5opoly8Laguerre9real_typeE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly8Laguerre7pointerE">
+<span id="_CPPv3N5opoly8Laguerre7pointerE"></span><span id="_CPPv2N5opoly8Laguerre7pointerE"></span><span id="opoly::Laguerre::pointer"></span><span class="target" id="a00025_1abd57f25676786ef90aacaab34d0301b4"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly8Laguerre9real_typeE" title="opoly::Laguerre::real_type"><span class="pre">real_type</span></a> <span class="pre">*</span><code class="sig-name descname"><span class="pre">pointer</span></code><a class="headerlink" href="#_CPPv4N5opoly8Laguerre7pointerE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly8Laguerre13const_pointerE">
+<span id="_CPPv3N5opoly8Laguerre13const_pointerE"></span><span id="_CPPv2N5opoly8Laguerre13const_pointerE"></span><span id="opoly::Laguerre::const_pointer"></span><span class="target" id="a00025_1a6199fbd4b2816d7115b19a54c050ad63"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly8Laguerre9real_typeE" title="opoly::Laguerre::real_type"><span class="pre">real_type</span></a> <em class="property"><span class="pre">const</span></em> <span class="pre">*</span><code class="sig-name descname"><span class="pre">const_pointer</span></code><a class="headerlink" href="#_CPPv4N5opoly8Laguerre13const_pointerE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly8Laguerre9referenceE">
+<span id="_CPPv3N5opoly8Laguerre9referenceE"></span><span id="_CPPv2N5opoly8Laguerre9referenceE"></span><span id="opoly::Laguerre::reference"></span><span class="target" id="a00025_1a2308f32366c4256190493093a21ef2f9"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly8Laguerre9real_typeE" title="opoly::Laguerre::real_type"><span class="pre">real_type</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">reference</span></code><a class="headerlink" href="#_CPPv4N5opoly8Laguerre9referenceE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly8Laguerre15const_referenceE">
+<span id="_CPPv3N5opoly8Laguerre15const_referenceE"></span><span id="_CPPv2N5opoly8Laguerre15const_referenceE"></span><span id="opoly::Laguerre::const_reference"></span><span class="target" id="a00025_1ad078aae25010818c33ed40a3f36674fb"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly8Laguerre9real_typeE" title="opoly::Laguerre::real_type"><span class="pre">real_type</span></a> <em class="property"><span class="pre">const</span></em> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">const_reference</span></code><a class="headerlink" href="#_CPPv4N5opoly8Laguerre15const_referenceE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N5opoly8Laguerre8LaguerreE9real_type">
+<span id="_CPPv3N5opoly8Laguerre8LaguerreE9real_type"></span><span id="_CPPv2N5opoly8Laguerre8LaguerreE9real_type"></span><span id="opoly::Laguerre::Laguerre__real_type"></span><span class="target" id="a00025_1aef8a82851672c7e090fdee7726e08728"></span><em class="property"><span class="pre">inline</span></em> <code class="sig-name descname"><span class="pre">Laguerre</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly8Laguerre9real_typeE" title="opoly::Laguerre::real_type"><span class="pre">real_type</span></a> <em><span class="pre">_alpha</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5opoly8Laguerre8LaguerreE9real_type" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly8LaguerreclE8int_type15const_reference">
+<span id="_CPPv3NK5opoly8LaguerreclE8int_type15const_reference"></span><span id="_CPPv2NK5opoly8LaguerreclE8int_type15const_reference"></span><span id="opoly::Laguerre::call-operator__int_type.const_referenceC"></span><span class="target" id="a00025_1a54f87449aed79204a4316fa5ea92a42d"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly8Laguerre9real_typeE" title="opoly::Laguerre::real_type"><span class="pre">real_type</span></a> <code class="sig-name descname"><span class="pre">operator()</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly8Laguerre8int_typeE" title="opoly::Laguerre::int_type"><span class="pre">int_type</span></a> <em><span class="pre">n</span></em>, <a class="reference internal" href="#_CPPv4N5opoly8Laguerre15const_referenceE" title="opoly::Laguerre::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly8LaguerreclE8int_type15const_reference" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Evaluate the polynomial</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>n</strong> – <strong>[in]</strong> the degree op the polynomial </p></li>
+<li><p><strong>x</strong> – <strong>[in]</strong> the value at which the polynomial is evaluated </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even">
+<p>the value <span class="math notranslate nohighlight">\( p(x) \)</span> </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly8Laguerre4svarE8int_type15const_reference">
+<span id="_CPPv3NK5opoly8Laguerre4svarE8int_type15const_reference"></span><span id="_CPPv2NK5opoly8Laguerre4svarE8int_type15const_reference"></span><span id="opoly::Laguerre::svar__int_type.const_referenceC"></span><span class="target" id="a00025_1a1d4b81a3ca67d7f3ac75a3e2c24a87ed"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly8Laguerre8int_typeE" title="opoly::Laguerre::int_type"><span class="pre">int_type</span></a> <code class="sig-name descname"><span class="pre">svar</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly8Laguerre8int_typeE" title="opoly::Laguerre::int_type"><span class="pre">int_type</span></a> <em><span class="pre">n</span></em>, <a class="reference internal" href="#_CPPv4N5opoly8Laguerre15const_referenceE" title="opoly::Laguerre::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly8Laguerre4svarE8int_type15const_reference" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Evaluate the sign variation of the corresponding sturm sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>n</strong> – <strong>[in]</strong> the degree op the polynomial </p></li>
+<li><p><strong>x</strong> – <strong>[in]</strong> the value at which the polynomial is evaluated </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even">
+<p>the number of sign variations </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly8Laguerre4evalE8int_type15const_reference9reference">
+<span id="_CPPv3NK5opoly8Laguerre4evalE8int_type15const_reference9reference"></span><span id="_CPPv2NK5opoly8Laguerre4evalE8int_type15const_reference9reference"></span><span id="opoly::Laguerre::eval__int_type.const_reference.referenceC"></span><span class="target" id="a00025_1a860082a109927bfe433e2ddfcef747a6"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly8Laguerre8int_typeE" title="opoly::Laguerre::int_type"><span class="pre">int_type</span></a> <code class="sig-name descname"><span class="pre">eval</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly8Laguerre8int_typeE" title="opoly::Laguerre::int_type"><span class="pre">int_type</span></a> <em><span class="pre">n</span></em>, <a class="reference internal" href="#_CPPv4N5opoly8Laguerre15const_referenceE" title="opoly::Laguerre::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em>, <a class="reference internal" href="#_CPPv4N5opoly8Laguerre9referenceE" title="opoly::Laguerre::reference"><span class="pre">reference</span></a> <em><span class="pre">p</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly8Laguerre4evalE8int_type15const_reference9reference" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Evaluate the polynomial and the sign variation of the corresponding sturm sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>n</strong> – <strong>[in]</strong> the degree op the polynomial </p></li>
+<li><p><strong>x</strong> – <strong>[in]</strong> the value at which the polynomial is evaluated </p></li>
+<li><p><strong>p</strong> – <strong>[out]</strong> the value <span class="math notranslate nohighlight">\( p(x) \)</span> </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even">
+<p>the number of sign variations </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly8Laguerre4evalE8int_type15const_reference9reference9reference">
+<span id="_CPPv3NK5opoly8Laguerre4evalE8int_type15const_reference9reference9reference"></span><span id="_CPPv2NK5opoly8Laguerre4evalE8int_type15const_reference9reference9reference"></span><span id="opoly::Laguerre::eval__int_type.const_reference.reference.referenceC"></span><span class="target" id="a00025_1ad45e0ab63d5d78486b19df473b9dfee3"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly8Laguerre8int_typeE" title="opoly::Laguerre::int_type"><span class="pre">int_type</span></a> <code class="sig-name descname"><span class="pre">eval</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly8Laguerre8int_typeE" title="opoly::Laguerre::int_type"><span class="pre">int_type</span></a> <em><span class="pre">n</span></em>, <a class="reference internal" href="#_CPPv4N5opoly8Laguerre15const_referenceE" title="opoly::Laguerre::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em>, <a class="reference internal" href="#_CPPv4N5opoly8Laguerre9referenceE" title="opoly::Laguerre::reference"><span class="pre">reference</span></a> <em><span class="pre">p</span></em>, <a class="reference internal" href="#_CPPv4N5opoly8Laguerre9referenceE" title="opoly::Laguerre::reference"><span class="pre">reference</span></a> <em><span class="pre">dp</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly8Laguerre4evalE8int_type15const_reference9reference9reference" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Evaluate the polynomial and its derivative. Moreover return the sign variation of the corresponding sturm sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>n</strong> – <strong>[in]</strong> the degree op the polynomial </p></li>
+<li><p><strong>x</strong> – <strong>[in]</strong> the value at which the polynomial is evaluated </p></li>
+<li><p><strong>p</strong> – <strong>[out]</strong> the value <span class="math notranslate nohighlight">\( p(x) \)</span> </p></li>
+<li><p><strong>dp</strong> – <strong>[out]</strong> the value <span class="math notranslate nohighlight">\( p'(x) \)</span> </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even">
+<p>the number of sign variations </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly8Laguerre8sequenceE8int_type15const_reference7pointer">
+<span id="_CPPv3NK5opoly8Laguerre8sequenceE8int_type15const_reference7pointer"></span><span id="_CPPv2NK5opoly8Laguerre8sequenceE8int_type15const_reference7pointer"></span><span id="opoly::Laguerre::sequence__int_type.const_reference.pointerC"></span><span class="target" id="a00025_1a456c44ddc52749b830071ab1c03222f9"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly8Laguerre8int_typeE" title="opoly::Laguerre::int_type"><span class="pre">int_type</span></a> <code class="sig-name descname"><span class="pre">sequence</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly8Laguerre8int_typeE" title="opoly::Laguerre::int_type"><span class="pre">int_type</span></a> <em><span class="pre">n</span></em>, <a class="reference internal" href="#_CPPv4N5opoly8Laguerre15const_referenceE" title="opoly::Laguerre::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em>, <a class="reference internal" href="#_CPPv4N5opoly8Laguerre7pointerE" title="opoly::Laguerre::pointer"><span class="pre">pointer</span></a> <em><span class="pre">p</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly8Laguerre8sequenceE8int_type15const_reference7pointer" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Evaluate the Sturm sequence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>n</strong> – <strong>[in]</strong> the degree of the polynomial </p></li>
+<li><p><strong>x</strong> – <strong>[in]</strong> the value at which the polynomial is evaluated </p></li>
+<li><p><strong>pvec</strong> – <strong>[out]</strong> the sequence <span class="math notranslate nohighlight">\( p_0(x) \)</span>, <span class="math notranslate nohighlight">\( p_1(x) \)</span>, …, <span class="math notranslate nohighlight">\( p_n(x) \)</span> of the 3 term recurrence </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even">
+<p>the number of sign variations </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly8Laguerre6weightE15const_reference">
+<span id="_CPPv3NK5opoly8Laguerre6weightE15const_reference"></span><span id="_CPPv2NK5opoly8Laguerre6weightE15const_reference"></span><span id="opoly::Laguerre::weight__const_referenceC"></span><span class="target" id="a00025_1a04bddc01045e2223fdd7ba80b122b76e"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly8Laguerre9real_typeE" title="opoly::Laguerre::real_type"><span class="pre">real_type</span></a> <code class="sig-name descname"><span class="pre">weight</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly8Laguerre15const_referenceE" title="opoly::Laguerre::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly8Laguerre6weightE15const_reference" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Weight function of the orthogonal polynomial </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<p><strong>x</strong> – <strong>[in]</strong> the value at which the weight is evaluated </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+</div>
+</dd>
+</dl>
+
+</div>
+</div>
+
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="../index.html" title="index">
+          <img class="logo" src="../_static/logo.png" alt="Logo"/>
+        </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+<div class="sphinx-toc sphinxglobaltoc">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">OPoly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="root.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-matlab/root.html">MATLAB API</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             >toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00017.html" title="Template Class Legendre"
+             >next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00013.html" title="Template Class Jacobi"
+             >previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">OPoly</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="root.html" >C++ API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Template Class Laguerre</a></li> 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Enrico Bertolazzi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>

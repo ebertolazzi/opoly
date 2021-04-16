@@ -1,0 +1,413 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Class Chebyshev &#8212; OPoly v1.0
+</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/cloud.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/table_styling.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+     
+        <script src="../_static/jquery.cookie.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.base.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.js"></script>
+    
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Template Class Gauss_quadrature" href="class_a00041.html" />
+    <link rel="prev" title="Namespace opoly" href="namespace_opoly.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             accesskey="C">toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00041.html" title="Template Class Gauss_quadrature"
+             accesskey="N">next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="namespace_opoly.html" title="Namespace opoly"
+             accesskey="P">previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">OPoly</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="root.html" accesskey="U">C++ API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Template Class Chebyshev</a></li> 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="template-class-chebyshev">
+<span id="exhale-class-a00021"></span><h1>Template Class Chebyshev<a class="headerlink" href="#template-class-chebyshev" title="Permalink to this headline">¶</a>
+</h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_opoly.hh.html#file-opoly-hh"><span class="std std-ref">File opoly.hh</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a>
+</h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a>
+</h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">opoly::poly&lt;</span> <span class="pre">INT,</span> <span class="pre">REAL</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="class_a00009.html#exhale-class-a00009"><span class="std std-ref">Template Class poly</span></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a>
+</h2>
+<dl class="cpp class">
+<dt id="_CPPv4I00EN5opoly9ChebyshevE">
+<span id="_CPPv3I00EN5opoly9ChebyshevE"></span><span id="_CPPv2I00EN5opoly9ChebyshevE"></span><span class="pre">template&lt;</span><span class="pre">typename</span> <code class="sig-name descname"><span class="pre">INT</span></code><span class="pre">,</span> <span class="pre">typename</span> <code class="sig-name descname"><span class="pre">REAL</span></code><span class="pre">&gt;</span><br><span class="target" id="a00021"></span><em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">opoly</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">Chebyshev</span></code> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">opoly</span><span class="pre">::</span><a class="reference internal" href="class_a00009.html#_CPPv4I00EN5opoly4polyE" title="opoly::poly"><span class="pre">poly</span></a><span class="pre">&lt;</span><a class="reference internal" href="#_CPPv4I00EN5opoly9ChebyshevE" title="opoly::Chebyshev::INT"><span class="pre">INT</span></a><span class="pre">,</span> <a class="reference internal" href="#_CPPv4I00EN5opoly9ChebyshevE" title="opoly::Chebyshev::REAL"><span class="pre">REAL</span></a><span class="pre">&gt;</span><a class="headerlink" href="#_CPPv4I00EN5opoly9ChebyshevE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Class defining the <a class="reference internal" href="#a00021"><span class="std std-ref">Chebyshev</span></a> orthogonal polynomial</p>
+<p></p>
+<ul class="simple">
+<li><p>INT is a integer type, can be also unsigned</p></li>
+<li><p>REAL is a floating point type, can be float or a high precision number class </p></li>
+</ul>
+
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly9Chebyshev8int_typeE">
+<span id="_CPPv3N5opoly9Chebyshev8int_typeE"></span><span id="_CPPv2N5opoly9Chebyshev8int_typeE"></span><span id="opoly::Chebyshev::int_type"></span><span class="target" id="a00021_1ae17dad82c450d96baf6c1b11646e8398"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4I00EN5opoly9ChebyshevE" title="opoly::Chebyshev::INT"><span class="pre">INT</span></a> <code class="sig-name descname"><span class="pre">int_type</span></code><a class="headerlink" href="#_CPPv4N5opoly9Chebyshev8int_typeE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly9Chebyshev11int_pointerE">
+<span id="_CPPv3N5opoly9Chebyshev11int_pointerE"></span><span id="_CPPv2N5opoly9Chebyshev11int_pointerE"></span><span id="opoly::Chebyshev::int_pointer"></span><span class="target" id="a00021_1aad46aea2ccd7f12dc087dc4c3e2a9961"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly9Chebyshev8int_typeE" title="opoly::Chebyshev::int_type"><span class="pre">int_type</span></a> <span class="pre">*</span><code class="sig-name descname"><span class="pre">int_pointer</span></code><a class="headerlink" href="#_CPPv4N5opoly9Chebyshev11int_pointerE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly9Chebyshev17int_const_pointerE">
+<span id="_CPPv3N5opoly9Chebyshev17int_const_pointerE"></span><span id="_CPPv2N5opoly9Chebyshev17int_const_pointerE"></span><span id="opoly::Chebyshev::int_const_pointer"></span><span class="target" id="a00021_1afce7c709abd0b715b9b7e7d7adab77c9"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly9Chebyshev8int_typeE" title="opoly::Chebyshev::int_type"><span class="pre">int_type</span></a> <em class="property"><span class="pre">const</span></em> <span class="pre">*</span><code class="sig-name descname"><span class="pre">int_const_pointer</span></code><a class="headerlink" href="#_CPPv4N5opoly9Chebyshev17int_const_pointerE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly9Chebyshev13int_referenceE">
+<span id="_CPPv3N5opoly9Chebyshev13int_referenceE"></span><span id="_CPPv2N5opoly9Chebyshev13int_referenceE"></span><span id="opoly::Chebyshev::int_reference"></span><span class="target" id="a00021_1af6714314998ddff4eef6e6971fba5459"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly9Chebyshev8int_typeE" title="opoly::Chebyshev::int_type"><span class="pre">int_type</span></a> <code class="sig-name descname"><span class="pre">int_reference</span></code><a class="headerlink" href="#_CPPv4N5opoly9Chebyshev13int_referenceE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly9Chebyshev19int_const_referenceE">
+<span id="_CPPv3N5opoly9Chebyshev19int_const_referenceE"></span><span id="_CPPv2N5opoly9Chebyshev19int_const_referenceE"></span><span id="opoly::Chebyshev::int_const_reference"></span><span class="target" id="a00021_1a1761e35e523ba531841fff1a33fb8809"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly9Chebyshev8int_typeE" title="opoly::Chebyshev::int_type"><span class="pre">int_type</span></a> <em class="property"><span class="pre">const</span></em> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">int_const_reference</span></code><a class="headerlink" href="#_CPPv4N5opoly9Chebyshev19int_const_referenceE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly9Chebyshev9real_typeE">
+<span id="_CPPv3N5opoly9Chebyshev9real_typeE"></span><span id="_CPPv2N5opoly9Chebyshev9real_typeE"></span><span id="opoly::Chebyshev::real_type"></span><span class="target" id="a00021_1a2e5e3eb723778b93d3c6ac7d9de36143"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4I00EN5opoly9ChebyshevE" title="opoly::Chebyshev::REAL"><span class="pre">REAL</span></a> <code class="sig-name descname"><span class="pre">real_type</span></code><a class="headerlink" href="#_CPPv4N5opoly9Chebyshev9real_typeE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly9Chebyshev7pointerE">
+<span id="_CPPv3N5opoly9Chebyshev7pointerE"></span><span id="_CPPv2N5opoly9Chebyshev7pointerE"></span><span id="opoly::Chebyshev::pointer"></span><span class="target" id="a00021_1a8f0d08025dd82108537286ac1bb876a5"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly9Chebyshev9real_typeE" title="opoly::Chebyshev::real_type"><span class="pre">real_type</span></a> <span class="pre">*</span><code class="sig-name descname"><span class="pre">pointer</span></code><a class="headerlink" href="#_CPPv4N5opoly9Chebyshev7pointerE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly9Chebyshev13const_pointerE">
+<span id="_CPPv3N5opoly9Chebyshev13const_pointerE"></span><span id="_CPPv2N5opoly9Chebyshev13const_pointerE"></span><span id="opoly::Chebyshev::const_pointer"></span><span class="target" id="a00021_1a50a5d8bed6c8d490ea1fd890d32ca36f"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly9Chebyshev9real_typeE" title="opoly::Chebyshev::real_type"><span class="pre">real_type</span></a> <em class="property"><span class="pre">const</span></em> <span class="pre">*</span><code class="sig-name descname"><span class="pre">const_pointer</span></code><a class="headerlink" href="#_CPPv4N5opoly9Chebyshev13const_pointerE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly9Chebyshev9referenceE">
+<span id="_CPPv3N5opoly9Chebyshev9referenceE"></span><span id="_CPPv2N5opoly9Chebyshev9referenceE"></span><span id="opoly::Chebyshev::reference"></span><span class="target" id="a00021_1af29e29087eb79a05ed52b349d618728a"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly9Chebyshev9real_typeE" title="opoly::Chebyshev::real_type"><span class="pre">real_type</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">reference</span></code><a class="headerlink" href="#_CPPv4N5opoly9Chebyshev9referenceE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5opoly9Chebyshev15const_referenceE">
+<span id="_CPPv3N5opoly9Chebyshev15const_referenceE"></span><span id="_CPPv2N5opoly9Chebyshev15const_referenceE"></span><span id="opoly::Chebyshev::const_reference"></span><span class="target" id="a00021_1a96e74a37b8343342a4c586f58784214f"></span><em class="property"><span class="pre">typedef</span> </em><a class="reference internal" href="#_CPPv4N5opoly9Chebyshev9real_typeE" title="opoly::Chebyshev::real_type"><span class="pre">real_type</span></a> <em class="property"><span class="pre">const</span></em> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">const_reference</span></code><a class="headerlink" href="#_CPPv4N5opoly9Chebyshev15const_referenceE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N5opoly9Chebyshev9ChebyshevEv">
+<span id="_CPPv3N5opoly9Chebyshev9ChebyshevEv"></span><span id="_CPPv2N5opoly9Chebyshev9ChebyshevEv"></span><span id="opoly::Chebyshev::Chebyshev"></span><span class="target" id="a00021_1a32e85540c9c19f66f20b8e1fa0011ee5"></span><em class="property"><span class="pre">inline</span></em> <code class="sig-name descname"><span class="pre">Chebyshev</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5opoly9Chebyshev9ChebyshevEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly9ChebyshevclE8int_type15const_reference">
+<span id="_CPPv3NK5opoly9ChebyshevclE8int_type15const_reference"></span><span id="_CPPv2NK5opoly9ChebyshevclE8int_type15const_reference"></span><span id="opoly::Chebyshev::call-operator__int_type.const_referenceC"></span><span class="target" id="a00021_1a3797b4e1db70eec5e5bd32eb0d76ae2f"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly9Chebyshev9real_typeE" title="opoly::Chebyshev::real_type"><span class="pre">real_type</span></a> <code class="sig-name descname"><span class="pre">operator()</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly9Chebyshev8int_typeE" title="opoly::Chebyshev::int_type"><span class="pre">int_type</span></a> <em><span class="pre">n</span></em>, <a class="reference internal" href="#_CPPv4N5opoly9Chebyshev15const_referenceE" title="opoly::Chebyshev::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly9ChebyshevclE8int_type15const_reference" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Evaluate the polynomial</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>n</strong> – <strong>[in]</strong> the degree op the polynomial </p></li>
+<li><p><strong>x</strong> – <strong>[in]</strong> the value at which the polynomial is evaluated </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even">
+<p>the value <span class="math notranslate nohighlight">\( p(x) \)</span> </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly9Chebyshev4svarE8int_type15const_reference">
+<span id="_CPPv3NK5opoly9Chebyshev4svarE8int_type15const_reference"></span><span id="_CPPv2NK5opoly9Chebyshev4svarE8int_type15const_reference"></span><span id="opoly::Chebyshev::svar__int_type.const_referenceC"></span><span class="target" id="a00021_1a064d3d51ac63d9862eaa40fc2564b4fe"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly9Chebyshev8int_typeE" title="opoly::Chebyshev::int_type"><span class="pre">int_type</span></a> <code class="sig-name descname"><span class="pre">svar</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly9Chebyshev8int_typeE" title="opoly::Chebyshev::int_type"><span class="pre">int_type</span></a> <em><span class="pre">n</span></em>, <a class="reference internal" href="#_CPPv4N5opoly9Chebyshev15const_referenceE" title="opoly::Chebyshev::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly9Chebyshev4svarE8int_type15const_reference" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Evaluate the sign variation of the corresponding sturm sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>n</strong> – <strong>[in]</strong> the degree op the polynomial </p></li>
+<li><p><strong>x</strong> – <strong>[in]</strong> the value at which the polynomial is evaluated </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even">
+<p>the number of sign variations </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly9Chebyshev4evalE8int_type15const_reference9reference">
+<span id="_CPPv3NK5opoly9Chebyshev4evalE8int_type15const_reference9reference"></span><span id="_CPPv2NK5opoly9Chebyshev4evalE8int_type15const_reference9reference"></span><span id="opoly::Chebyshev::eval__int_type.const_reference.referenceC"></span><span class="target" id="a00021_1ac962db8db4e1bd685151b3d1480a4b17"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly9Chebyshev8int_typeE" title="opoly::Chebyshev::int_type"><span class="pre">int_type</span></a> <code class="sig-name descname"><span class="pre">eval</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly9Chebyshev8int_typeE" title="opoly::Chebyshev::int_type"><span class="pre">int_type</span></a> <em><span class="pre">n</span></em>, <a class="reference internal" href="#_CPPv4N5opoly9Chebyshev15const_referenceE" title="opoly::Chebyshev::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em>, <a class="reference internal" href="#_CPPv4N5opoly9Chebyshev9referenceE" title="opoly::Chebyshev::reference"><span class="pre">reference</span></a> <em><span class="pre">p</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly9Chebyshev4evalE8int_type15const_reference9reference" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Evaluate the polynomial and the sign variation of the corresponding sturm sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>n</strong> – <strong>[in]</strong> the degree op the polynomial </p></li>
+<li><p><strong>x</strong> – <strong>[in]</strong> the value at which the polynomial is evaluated </p></li>
+<li><p><strong>p</strong> – <strong>[out]</strong> the value <span class="math notranslate nohighlight">\( p(x) \)</span> </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even">
+<p>the number of sign variations </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly9Chebyshev4evalE8int_type15const_reference9reference9reference">
+<span id="_CPPv3NK5opoly9Chebyshev4evalE8int_type15const_reference9reference9reference"></span><span id="_CPPv2NK5opoly9Chebyshev4evalE8int_type15const_reference9reference9reference"></span><span id="opoly::Chebyshev::eval__int_type.const_reference.reference.referenceC"></span><span class="target" id="a00021_1a98691cb505a35a4b4ee6b1f6c22e3f3c"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly9Chebyshev8int_typeE" title="opoly::Chebyshev::int_type"><span class="pre">int_type</span></a> <code class="sig-name descname"><span class="pre">eval</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly9Chebyshev8int_typeE" title="opoly::Chebyshev::int_type"><span class="pre">int_type</span></a> <em><span class="pre">n</span></em>, <a class="reference internal" href="#_CPPv4N5opoly9Chebyshev15const_referenceE" title="opoly::Chebyshev::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em>, <a class="reference internal" href="#_CPPv4N5opoly9Chebyshev9referenceE" title="opoly::Chebyshev::reference"><span class="pre">reference</span></a> <em><span class="pre">p</span></em>, <a class="reference internal" href="#_CPPv4N5opoly9Chebyshev9referenceE" title="opoly::Chebyshev::reference"><span class="pre">reference</span></a> <em><span class="pre">dp</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly9Chebyshev4evalE8int_type15const_reference9reference9reference" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Evaluate the polynomial and its derivative. Moreover return the sign variation of the corresponding sturm sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>n</strong> – <strong>[in]</strong> the degree op the polynomial </p></li>
+<li><p><strong>x</strong> – <strong>[in]</strong> the value at which the polynomial is evaluated </p></li>
+<li><p><strong>p</strong> – <strong>[out]</strong> the value <span class="math notranslate nohighlight">\( p(x) \)</span> </p></li>
+<li><p><strong>dp</strong> – <strong>[out]</strong> the value <span class="math notranslate nohighlight">\( p'(x) \)</span> </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even">
+<p>the number of sign variations </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly9Chebyshev8sequenceE8int_type15const_reference7pointer">
+<span id="_CPPv3NK5opoly9Chebyshev8sequenceE8int_type15const_reference7pointer"></span><span id="_CPPv2NK5opoly9Chebyshev8sequenceE8int_type15const_reference7pointer"></span><span id="opoly::Chebyshev::sequence__int_type.const_reference.pointerC"></span><span class="target" id="a00021_1ad518fa8064cb3084d7c2c3bd3bfb3293"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly9Chebyshev8int_typeE" title="opoly::Chebyshev::int_type"><span class="pre">int_type</span></a> <code class="sig-name descname"><span class="pre">sequence</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly9Chebyshev8int_typeE" title="opoly::Chebyshev::int_type"><span class="pre">int_type</span></a> <em><span class="pre">n</span></em>, <a class="reference internal" href="#_CPPv4N5opoly9Chebyshev15const_referenceE" title="opoly::Chebyshev::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em>, <a class="reference internal" href="#_CPPv4N5opoly9Chebyshev7pointerE" title="opoly::Chebyshev::pointer"><span class="pre">pointer</span></a> <em><span class="pre">p</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly9Chebyshev8sequenceE8int_type15const_reference7pointer" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Evaluate the Sturm sequence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>n</strong> – <strong>[in]</strong> the degree of the polynomial </p></li>
+<li><p><strong>x</strong> – <strong>[in]</strong> the value at which the polynomial is evaluated </p></li>
+<li><p><strong>pvec</strong> – <strong>[out]</strong> the sequence <span class="math notranslate nohighlight">\( p_0(x) \)</span>, <span class="math notranslate nohighlight">\( p_1(x) \)</span>, …, <span class="math notranslate nohighlight">\( p_n(x) \)</span> of the 3 term recurrence </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even">
+<p>the number of sign variations </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5opoly9Chebyshev6weightE15const_reference">
+<span id="_CPPv3NK5opoly9Chebyshev6weightE15const_reference"></span><span id="_CPPv2NK5opoly9Chebyshev6weightE15const_reference"></span><span id="opoly::Chebyshev::weight__const_referenceC"></span><span class="target" id="a00021_1a152fdea582fe1c030ed12ade7493a069"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <a class="reference internal" href="#_CPPv4N5opoly9Chebyshev9real_typeE" title="opoly::Chebyshev::real_type"><span class="pre">real_type</span></a> <code class="sig-name descname"><span class="pre">weight</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5opoly9Chebyshev15const_referenceE" title="opoly::Chebyshev::const_reference"><span class="pre">const_reference</span></a> <em><span class="pre">x</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK5opoly9Chebyshev6weightE15const_reference" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Weight function of the orthogonal polynomial </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<p><strong>x</strong> – <strong>[in]</strong> the value at which the weight is evaluated </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+</div>
+</dd>
+</dl>
+
+</div>
+</div>
+
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="../index.html" title="index">
+          <img class="logo" src="../_static/logo.png" alt="Logo"/>
+        </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+<div class="sphinx-toc sphinxglobaltoc">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">OPoly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="root.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-matlab/root.html">MATLAB API</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             >toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00041.html" title="Template Class Gauss_quadrature"
+             >next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="namespace_opoly.html" title="Namespace opoly"
+             >previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">OPoly</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="root.html" >C++ API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Template Class Chebyshev</a></li> 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Enrico Bertolazzi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>

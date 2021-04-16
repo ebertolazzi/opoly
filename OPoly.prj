@@ -1,10 +1,10 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration build-checksum="4069222373" file="/Users/enrico/Ricerca/develop/myGitProjetcs/opoly/OPoly.prj" location="/Users/enrico/Ricerca/develop/myGitProjetcs/opoly" name="OPoly" target="target.toolbox" target-name="Package Toolbox">
+  <configuration build-checksum="2004538963" file="/Users/enrico/Ricerca/develop/myGitProjetcs/opoly/OPoly.prj" location="/Users/enrico/Ricerca/develop/myGitProjetcs/opoly" name="OPoly" target="target.toolbox" target-name="Package Toolbox">
     <param.appname>OPoly</param.appname>
     <param.authnamewatermark>Enrico Bertolazzi</param.authnamewatermark>
-    <param.email>enico.bertolazzi@unitn.it</param.email>
-    <param.company>University of Trento</param.company>
-    <param.summary>Orthogonal polynomial calss</param.summary>
+    <param.email>enrico.bertolazzi@unitn.it</param.email>
+    <param.company>Unversità Degli Studi di Trento</param.company>
+    <param.summary>Orthogonal polynomial class</param.summary>
     <param.description>`Opolys` class which implements varios orthogonal polyniamial.
 The polynomials are the following:
  
@@ -20,17 +20,11 @@ Online doc at: http://ebertolazzi.github.io/Opoly</param.description>
     <param.screenshot>${PROJECT_ROOT}/toolbox/icon.png</param.screenshot>
     <param.version>1.0</param.version>
     <param.output>${PROJECT_ROOT}/OPoly.mltbx</param.output>
-    <param.products.name>
-      <item>MATLAB</item>
-    </param.products.name>
-    <param.products.id>
-      <item>1</item>
-    </param.products.id>
-    <param.products.version>
-      <item>9.9</item>
-    </param.products.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
     <param.platforms />
-    <param.guid>0dba433b-d115-42b4-a271-d863497f90fb</param.guid>
+    <param.guid>1981c2e2-bc28-4a81-ac5a-350fe0676f67</param.guid>
     <param.exclude.filters>% List files contained in your toolbox folder that you would like to exclude
 % from packaging.  Excludes should be listed relative to the toolbox folder.
 % Some examples of how to specify excludes are provided below:
@@ -52,9 +46,30 @@ Online doc at: http://ebertolazzi.github.io/Opoly</param.description>
 %
 .DS_Store
 populate_toolbox.rb
-setup.m</param.exclude.filters>
+icon.png</param.exclude.filters>
     <param.exclude.pcodedmfiles>true</param.exclude.pcodedmfiles>
-    <param.examples />
+    <param.examples>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;examples&gt;
+   &lt;exampleCategory name="tests"&gt;
+      &lt;example name="test1" type="html"&gt;
+         &lt;file type="source"&gt;/tests/html/test1.html&lt;/file&gt;
+         &lt;file type="main"&gt;/tests/test1.m&lt;/file&gt;
+         &lt;file type="thumbnail"&gt;/tests/html/test1.png&lt;/file&gt;
+         &lt;file type="image"&gt;/tests/html/test1_01.png&lt;/file&gt;
+      &lt;/example&gt;
+      &lt;example name="test2" type="html"&gt;
+         &lt;file type="source"&gt;/tests/html/test2.html&lt;/file&gt;
+         &lt;file type="main"&gt;/tests/test2.m&lt;/file&gt;
+         &lt;file type="thumbnail"&gt;/tests/html/test2.png&lt;/file&gt;
+         &lt;file type="image"&gt;/tests/html/test2_01.png&lt;/file&gt;
+      &lt;/example&gt;
+      &lt;example name="test3" type="html"&gt;
+         &lt;file type="source"&gt;/tests/html/test3.html&lt;/file&gt;
+         &lt;file type="main"&gt;/tests/test3.m&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+   &lt;/exampleCategory&gt;
+&lt;/examples&gt;</param.examples>
     <param.demosxml />
     <param.apps />
     <param.registered.apps />
@@ -63,9 +78,7 @@ setup.m</param.exclude.filters>
     <param.matlabpath.excludes />
     <param.javaclasspath.excludes />
     <param.exported.on.package>false</param.exported.on.package>
-    <param.required.addons>
-      <requiredaddons />
-    </param.required.addons>
+    <param.required.addons />
     <param.matlab.project.id />
     <param.matlab.project.name />
     <param.release.start />
@@ -83,11 +96,15 @@ setup.m</param.exclude.filters>
     <param.additional.sw.linux.url />
     <unset>
       <param.authnamewatermark />
+      <param.email />
+      <param.company />
       <param.version />
       <param.output />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
       <param.platforms />
       <param.exclude.pcodedmfiles />
-      <param.examples />
       <param.demosxml />
       <param.apps />
       <param.registered.apps />
@@ -95,6 +112,7 @@ setup.m</param.exclude.filters>
       <param.matlabpath.excludes />
       <param.javaclasspath.excludes />
       <param.exported.on.package />
+      <param.required.addons />
       <param.matlab.project.id />
       <param.matlab.project.name />
       <param.release.start />
@@ -118,9 +136,9 @@ setup.m</param.exclude.filters>
       <file>${PROJECT_ROOT}/toolbox/bin</file>
       <file>${PROJECT_ROOT}/toolbox/demos.xml</file>
       <file>${PROJECT_ROOT}/toolbox/doc</file>
-      <file>${PROJECT_ROOT}/toolbox/icon.png</file>
       <file>${PROJECT_ROOT}/toolbox/lib</file>
       <file>${PROJECT_ROOT}/toolbox/license.txt</file>
+      <file>${PROJECT_ROOT}/toolbox/setup.m</file>
       <file>${PROJECT_ROOT}/toolbox/src</file>
       <file>${PROJECT_ROOT}/toolbox/src_mex</file>
       <file>${PROJECT_ROOT}/toolbox/tests</file>

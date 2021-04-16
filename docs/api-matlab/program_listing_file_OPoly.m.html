@@ -1,0 +1,237 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program Listing for File OPoly.m &#8212; OPoly v1.0
+</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/cloud.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/table_styling.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+
+    
+    
+     
+        <script src="../_static/jquery.cookie.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.base.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.js"></script>
+    
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             accesskey="C">toc</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">OPoly</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">Program Listing for File OPoly.m</a></li> 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="program-listing-for-file-opoly-m">
+<span id="program-listing-file-opoly-m"></span><h1>Program Listing for File OPoly.m<a class="headerlink" href="#program-listing-for-file-opoly-m" title="Permalink to this headline">¶</a>
+</h1>
+<p>↰ <a class="reference internal" href="file_OPoly.m.html#file-opoly-m"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">OPoly.m</span></code>)</p>
+<div class="highlight-MATLAB notranslate">
+<div class="highlight"><pre><span></span><span class="c">%&gt;</span><span class="w"></span>
+<span class="c">%&gt; Class storing and managin orthogonal polynomial</span><span class="w"></span>
+<span class="c">%&gt;</span><span class="w"></span>
+<span class="c">%&gt;</span><span class="w"></span>
+<span class="c">%&gt;</span><span class="w"></span>
+<span class="k">classdef</span><span class="w"> </span><span class="n">OPoly</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">handle</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">properties</span><span class="w"> </span><span class="p">(</span><span class="nb">SetAccess</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">private</span><span class="p">,</span><span class="w"> </span><span class="nb">Hidden</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">true</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">objectHandle</span><span class="p">;</span><span class="w"> </span><span class="c">% Handle to the underlying C++ class instance</span><span class="w"></span>
+<span class="w">  </span><span class="k">end</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">methods</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">function</span><span class="w"> </span>self<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">OPoly</span><span class="p">(</span> varargin <span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="c">% kind [, alpha, beta ]</span><span class="w"></span>
+<span class="w">      </span><span class="n">self</span><span class="p">.</span><span class="n">objectHandle</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">OPolyMexWrapper</span><span class="p">(</span><span class="w"> </span><span class="s">'new'</span><span class="p">,</span><span class="w"> </span><span class="nb">varargin</span><span class="p">{:}</span><span class="w">  </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span><span class="c">% --------------------------------------------------------------------</span><span class="w"></span>
+<span class="w">    </span><span class="c">%</span><span class="w"></span>
+<span class="w">    </span><span class="k">function</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span>self<span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="c">% Destroy the C++ class instance</span><span class="w"></span>
+<span class="w">      </span><span class="n">OPolyMexWrapper</span><span class="p">(</span><span class="w"> </span><span class="s">'delete'</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">objectHandle</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span><span class="c">% --------------------------------------------------------------------</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; Evaluate the polynomial \f$ p_n(x) \f$ where  \f$ n \f$ is the</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; degree of the polynomial. The value \f$ x \f$ can be a scalar</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; a vector or a matrix. The result is of the same dimension of \f$ x \f$.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="k">function</span><span class="w"> </span>P<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">eval</span><span class="p">(</span> self, n, x <span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">P</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">OPolyMexWrapper</span><span class="p">(</span><span class="w"> </span><span class="s">'eval'</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">objectHandle</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span><span class="c">% --------------------------------------------------------------------</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; Evaluate the polynomial \f$ p_n(x) \f$ and \f$ p'_n(x) \f$</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; where \f$ n \f$ is the degree of the polynomial.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; Moreover a sign variation of the Sturm sequence associated</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; to the recurrence is returned.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; The value \f$ x \f$ can be a scalar a vector or a matrix.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; The results are of the same dimension of \f$ x \f$.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="k">function</span><span class="w"> </span>[P,Dp,s]<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">eval2</span><span class="p">(</span> self, n, x <span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">[</span><span class="n">P</span><span class="p">,</span><span class="n">Dp</span><span class="p">,</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">OPolyMexWrapper</span><span class="p">(</span><span class="w"> </span><span class="s">'eval2'</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">objectHandle</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span><span class="c">% --------------------------------------------------------------------</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; Evaluate the sequence \f$ p_0(x), p_1(x),\ldots, p_n(x) \f$.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; Moreover a sign variation of the Sturm sequence associated</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; to the recurrence is returned.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; The value \f$ x \f$ can be a scalar a vector or a matrix.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; The results are of the same dimension of \f$ x \f$.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; If `x` is an `m x p` matrix then `PP` is an array of</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; dimension `n x m x p`</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="k">function</span><span class="w"> </span>[PP,s]<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">sequence</span><span class="p">(</span> self, n, x <span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">[</span><span class="n">PP</span><span class="p">,</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">OPolyMexWrapper</span><span class="p">(</span><span class="w"> </span><span class="s">'sequence'</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">objectHandle</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span><span class="c">% --------------------------------------------------------------------</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; Evaluate all the zeros of the orthogonal polynomial \f$ p_n(x) \f$.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; - `n` is the degree of the polynomial</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; - `epsi` is the tolerance used in the computation of the zeros</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="k">function</span><span class="w"> </span>x<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">zeros</span><span class="p">(</span> self, n, epsi <span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">OPolyMexWrapper</span><span class="p">(</span><span class="w"> </span><span class="s">'zeros'</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">objectHandle</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">epsi</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span><span class="c">% --------------------------------------------------------------------</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; Evaluate all nodes and weight of the Gauss-Legendre quadrature.</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; The nodes are the zeros of the associated Legendre polynomial</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; - `n`    is the number of interpolation point</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt; - `epsi` is the tolerance used in the computation of</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;   the zeros of the orthogonal polynomial</span><span class="w"></span>
+<span class="w">    </span><span class="c">%&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="k">function</span><span class="w"> </span>[node,w]<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">gauss</span><span class="p">(</span> self, n, epsi <span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">[</span><span class="n">node</span><span class="p">,</span><span class="n">w</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">OPolyMexWrapper</span><span class="p">(</span><span class="w"> </span><span class="s">'gauss'</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">objectHandle</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">epsi</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">  </span><span class="k">end</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="../index.html" title="index">
+          <img class="logo" src="../_static/logo.png" alt="Logo"/>
+        </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+<div class="sphinx-toc sphinxglobaltoc">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">OPoly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-cpp/root.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="root.html">MATLAB API</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             >toc</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">OPoly</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">Program Listing for File OPoly.m</a></li> 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Enrico Bertolazzi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>

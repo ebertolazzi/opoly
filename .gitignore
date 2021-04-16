@@ -10,3 +10,6 @@ docs_build/sphinx_matlab/api-matlab
 docs_build/xml-cpp
 docs_build/xml-matlab
 OPoly.mltbx
+docs_build/sphinx/_doxygen
+docs_build/sphinx/api-cpp
+docs_build/sphinx/api-matlab
