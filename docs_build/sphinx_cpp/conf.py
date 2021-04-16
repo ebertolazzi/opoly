@@ -37,7 +37,6 @@ exhale_args = {
         SHORT_NAMES         = YES
 
         PREDEFINED           += protected=private
-        EXCLUDE_PATTERNS      = SplinesCinterface.*
 
         EXTRACT_ALL            = YES
         EXTRACT_STATIC         = YES
@@ -61,7 +60,7 @@ exhale_args = {
   "lexerMapping": { r".*\.m": "MATLAB" }
 }
 
-cpp_index_common_prefix = ['Splines::']
+cpp_index_common_prefix = ['opoly::']
 
 html_theme_options['logotarget'] = "../index"
 html_theme_options['roottarget'] = "../index"

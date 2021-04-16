@@ -12,6 +12,7 @@ build:
 
 install:
 	@cd sphinx; rm -rf ../../docs/*; cp -a _build/html/. ../../docs; cd ..
+	@touch ../docs/.nojekyll
 
 clean:
 	@rm -rf xml

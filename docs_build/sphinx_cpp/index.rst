@@ -1,5 +1,5 @@
-Splines C++ interface
-=====================
+OPoly
+=====
 
 .. toctree::
    :maxdepth: 2

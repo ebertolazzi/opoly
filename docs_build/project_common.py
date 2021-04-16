@@ -1,6 +1,6 @@
 import os
 
-project   = 'Splines'
+project   = 'OPoly'
 copyright = '2021, Enrico Bertolazzi'
 author    = ':email:`Enrico Bertolazzi <enrico.bertolazzi@unitn.it>`'
 version   = os.popen('git describe --tags --abbrev=0').read()
