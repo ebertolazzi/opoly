@@ -90,7 +90,6 @@ DATA_DELETE( mxArray const * & mx_id ) {
   destroyObject<opoly::poly<mwSize,double> >(mx_id);
 }
 
-
 // . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 static
@@ -135,6 +134,39 @@ do_new( int nlhs, mxArray       *plhs[],
   }
 
   DATA_NEW( arg_out_0, ptr );
+
+  #undef CMD
+}
+
+// . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+static
+void
+do_copy(
+  int nlhs, mxArray       *plhs[],
+  int nrhs, mxArray const *prhs[]
+) {
+  #define CMD "OPolyMexWrapper( 'copy', OBJ ): "
+  MEX_ASSERT( nrhs == 2, CMD << "expected 2 inputs, nrhs = " << nrhs << '\n' );
+  MEX_ASSERT( nlhs == 1, CMD << "expected 1 output, nlhs = " << nlhs << '\n' );
+
+  opoly::poly<mwSize,double> * ptr  = convertMat2Ptr<opoly::poly<mwSize,double> >(arg_in_1);
+  opoly::poly<mwSize,double> * ptr1 = nullptr;
+
+  if      ( ptr->type() == "jacobi"    ) ptr1 = new opoly::Jacobi<mwSize,double>( static_cast<opoly::Jacobi<mwSize,double>*>(ptr) );
+  else if ( ptr->type() == "legendre"  ) ptr1 = new opoly::Legendre<mwSize,double>( static_cast<opoly::Legendre<mwSize,double>*>(ptr) );
+  else if ( ptr->type() == "chebyshev" ) ptr1 = new opoly::Chebyshev<mwSize,double>( static_cast<opoly::Chebyshev<mwSize,double>*>(ptr) );
+  else if ( ptr->type() == "laguerre"  ) ptr1 = new opoly::Laguerre<mwSize,double>( static_cast<opoly::Laguerre<mwSize,double>*>(ptr) );
+  else if ( ptr->type() == "hermite"   ) ptr1 = new opoly::Hermite<mwSize,double>( static_cast<opoly::Hermite<mwSize,double>*>(ptr) );
+  else {
+    MEX_ASSERT(
+      false,
+      "POlynomial type: " << ptr->type() << " must be one of the strings:\n"
+      "'jacobi', 'legendre', 'chebyshev', 'laguerre', 'hermite'"
+    );
+  }
+
+  arg_out_0 = convertPtr2Mat<opoly::poly<mwSize,double> >(ptr1);
 
   #undef CMD
 }
@@ -222,9 +254,7 @@ do_eval( int nlhs, mxArray       *plhs[],
   mwSize n = mwSize( getInt( arg_in_2, CMD "expected scalar int for n" ) );
 
   mwSize nx, mx;
-  real_type const * x = getMatrixPointer(
-    arg_in_3, nx, mx, CMD "error in reading `x`"
-  );
+  real_type const * x = getMatrixPointer( arg_in_3, nx, mx, CMD "error in reading `x`" );
   real_type * p = createMatrixValue( arg_out_0, nx, mx );
   for ( mwSize j = 0; j < mx*nx; ++j )
     *p++ = (*ptr)( n, *x++ );
@@ -349,6 +379,7 @@ typedef void (*DO_CMD)( int nlhs, mxArray *plhs[], int nrhs, mxArray const *prhs
 
 static map<string,DO_CMD> cmd_to_fun = {
   {"new",do_new},
+  {"copy",do_copy},
   {"delete",do_delete},
   {"setup",do_setup},
   {"eval",do_eval},

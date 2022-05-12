@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration build-checksum="2004538963" file="/Users/enrico/Ricerca/develop/myGitProjetcs/opoly/OPoly.prj" location="/Users/enrico/Ricerca/develop/myGitProjetcs/opoly" name="OPoly" target="target.toolbox" target-name="Package Toolbox">
+  <configuration build-checksum="2130110745" file="/Users/enrico/Ricerca/Software/REPOS/myReposGit/opoly/OPoly.prj" location="/Users/enrico/Ricerca/Software/REPOS/myReposGit/opoly" name="OPoly" target="target.toolbox" target-name="Package Toolbox">
     <param.appname>OPoly</param.appname>
     <param.authnamewatermark>Enrico Bertolazzi</param.authnamewatermark>
     <param.email>enrico.bertolazzi@unitn.it</param.email>
@@ -18,7 +18,7 @@ Moreover the class computes the zeros of the polynomilas and weight and nodes of
 
 Online doc at: http://ebertolazzi.github.io/Opoly</param.description>
     <param.screenshot>${PROJECT_ROOT}/toolbox/icon.png</param.screenshot>
-    <param.version>1.0</param.version>
+    <param.version>1.0.1</param.version>
     <param.output>${PROJECT_ROOT}/OPoly.mltbx</param.output>
     <param.products.name />
     <param.products.id />
@@ -98,7 +98,6 @@ icon.png</param.exclude.filters>
       <param.authnamewatermark />
       <param.email />
       <param.company />
-      <param.version />
       <param.output />
       <param.products.name />
       <param.products.id />
@@ -147,12 +146,43 @@ icon.png</param.exclude.filters>
     <fileset.depfun.excluded />
     <fileset.package />
     <build-deliverables>
-      <file location="${PROJECT_ROOT}" name="OPoly.mltbx" optional="false">/Users/enrico/Ricerca/develop/myGitProjetcs/opoly/OPoly.mltbx</file>
+      <file location="${PROJECT_ROOT}" name="OPoly.mltbx" optional="false">/Users/enrico/Ricerca/Software/REPOS/myReposGit/opoly/OPoly.mltbx</file>
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>/Applications/MATLAB_R2020b.app</root>
-      <toolboxes />
+      <root>/Applications/MATLAB_R2021b.app</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
     </matlab>
     <platform>
       <unix>true</unix>
@@ -163,7 +193,7 @@ icon.png</param.exclude.filters>
       <vista>false</vista>
       <linux>false</linux>
       <solaris>false</solaris>
-      <osver>10.15.7</osver>
+      <osver>12.3.1</osver>
       <os32>false</os32>
       <os64>true</os64>
       <arch>maci64</arch>

@@ -3,23 +3,42 @@
 %>
 %>
 %>
-classdef OPoly < handle
+classdef OPoly < matlab.mixin.Copyable
 
   properties (SetAccess = private, Hidden = true)
     objectHandle; % Handle to the underlying C++ class instance
+    call_delete;
   end
-
+  % ----------------------------------------------------------------------
+  methods(Access = protected)
+    % make deep copy for copy command
+    function obj = copyElement( self )
+      obj              = copyElement@matlab.mixin.Copyable(self);
+      obj.objectHandle = FiberMexWrapper( 'copy', self.objectHandle );
+      obj.call_delete  = true;
+    end
+  end
+  % ----------------------------------------------------------------------
   methods
 
     function self = OPoly( varargin )
       % kind [, alpha, beta ]
-      self.objectHandle = OPolyMexWrapper( 'new', varargin{:}  );
+      self.objectHandle = OPolyMexWrapper( 'new', varargin{:} );
+      if nargin > 0 && (ischar(varargin{1}) || isstring(varargin{1}))
+        self.objectHandle = OPolyMexWrapper( 'new', varargin{:} );
+        self.call_delete  = true;
+      else
+        self.objectHandle = varargin{1}; % copia puntatore
+        self.call_delete  = false;
+      end
     end
     % --------------------------------------------------------------------
     %
     function delete(self)
       % Destroy the C++ class instance
-      OPolyMexWrapper( 'delete', self.objectHandle );
+      if self.call_delete
+        OPolyMexWrapper( 'delete', self.objectHandle );
+      end
     end
     % --------------------------------------------------------------------
     %>
@@ -32,7 +51,7 @@ classdef OPoly < handle
     end
     % --------------------------------------------------------------------
     %>
-    %> Evaluate the polynomial \f$ p_n(x) \f$ and \f$ p'_n(x) \f$ 
+    %> Evaluate the polynomial \f$ p_n(x) \f$ and \f$ p'_n(x) \f$
     %> where \f$ n \f$ is the degree of the polynomial.
     %> Moreover a sign variation of the Sturm sequence associated
     %> to the recurrence is returned.
@@ -59,9 +78,9 @@ classdef OPoly < handle
     % --------------------------------------------------------------------
     %>
     %> Evaluate all the zeros of the orthogonal polynomial \f$ p_n(x) \f$.
-    %> 
+    %>
     %> - `n` is the degree of the polynomial
-    %> - `epsi` is the tolerance used in the computation of the zeros 
+    %> - `epsi` is the tolerance used in the computation of the zeros
     %>
     function x = zeros( self, n, epsi )
       x = OPolyMexWrapper( 'zeros', self.objectHandle, n, epsi );
@@ -70,10 +89,10 @@ classdef OPoly < handle
     %>
     %> Evaluate all nodes and weight of the Gauss-Legendre quadrature.
     %> The nodes are the zeros of the associated Legendre polynomial
-    %> 
+    %>
     %> - `n`    is the number of interpolation point
     %> - `epsi` is the tolerance used in the computation of
-    %>   the zeros of the orthogonal polynomial 
+    %>   the zeros of the orthogonal polynomial
     %>
     function [node,w] = gauss( self, n, epsi )
       [node,w] = OPolyMexWrapper( 'gauss', self.objectHandle, n, epsi );

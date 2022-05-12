@@ -44,12 +44,14 @@
 
 #include <vector>
 #include <cmath>
+#include <string>
 
 namespace opoly {
 
   using std::vector;
   using std::pow;
   using std::abs;
+  using std::string;
 
   # define OPOLY_TYPES_FROM_TYPENAME(T)                        \
   typedef typename T::int_type            int_type;            \
@@ -77,12 +79,12 @@ namespace opoly {
     typedef real_type &        reference;                     \
     typedef real_type const &  const_reference
 
-  /*!
-   * Base class defining an orthogonal polynomial
-   *
-   * - INT  is a integer type, can be also unsigned
-   * - REAL is a floating point type, can be float or a high precision number class
-   */
+  //!
+  //! Base class defining an orthogonal polynomial
+  //!
+  //! - INT  is a integer type, can be also unsigned
+  //! - REAL is a floating point type, can be float or a high precision number class
+  //!
   template <typename INT, typename REAL>
   class poly {
 
@@ -96,38 +98,39 @@ namespace opoly {
 
     virtual ~poly() {};
 
-    /*!
-     * Evaluate the polynomial
-     *
-     * \param[in] n the degree op the polynomial
-     * \param[in] x the value at which the polynomial is evaluated
-     * \return the value \f$ p(x) \f$
-     */
+    virtual string type() const = 0;
+
+    //!
+    //! Evaluate the polynomial
+    //!
+    //! \param[in] n the degree op the polynomial
+    //! \param[in] x the value at which the polynomial is evaluated
+    //! \return the value \f$ p(x) \f$
+    //!
     virtual
     real_type
     operator () ( int_type n, const_reference x ) const = 0;
 
-
-    /*!
-     * Evaluate the sign variation of the corresponding sturm sequence.
-     *
-     * \param[in] n   the degree op the polynomial
-     * \param[in] x   the value at which the polynomial is evaluated
-     * \return    the number of sign variations
-     */
+    //!
+    //! Evaluate the sign variation of the corresponding sturm sequence.
+    //!
+    //! \param[in] n   the degree op the polynomial
+    //! \param[in] x   the value at which the polynomial is evaluated
+    //! \return    the number of sign variations
+    //!
     virtual
     int_type
     svar( int_type n, const_reference x ) const = 0;
 
-    /*!
-     * Evaluate the polynomial and the sign variation of the
-     * corresponding sturm sequence.
-     *
-     * \param[in]  n  the degree op the polynomial
-     * \param[in]  x  the value at which the polynomial is evaluated
-     * \param[out] p  the value \f$ p(x) \f$
-     * \return the number of sign variations
-     */
+    //!
+    //! Evaluate the polynomial and the sign variation of the
+    //! corresponding sturm sequence.
+    //!
+    //! \param[in]  n  the degree op the polynomial
+    //! \param[in]  x  the value at which the polynomial is evaluated
+    //! \param[out] p  the value \f$ p(x) \f$
+    //! \return the number of sign variations
+    //!
     virtual
     int_type
     eval(
@@ -136,17 +139,17 @@ namespace opoly {
       reference       p
     ) const = 0;
 
-    /*!
-     * Evaluate the polynomial and its derivative.
-     * Moreover return the sign variation of the
-     * corresponding sturm sequence.
-     *
-     * \param[in]  n  the degree op the polynomial
-     * \param[in]  x  the value at which the polynomial is evaluated
-     * \param[out] p  the value \f$ p(x) \f$
-     * \param[out] dp the value \f$ p'(x) \f$
-     * \return the number of sign variations
-     */
+    //!
+    //! Evaluate the polynomial and its derivative.
+    //! Moreover return the sign variation of the
+    //! corresponding sturm sequence.
+    //!
+    //! \param[in]  n  the degree op the polynomial
+    //! \param[in]  x  the value at which the polynomial is evaluated
+    //! \param[out] p  the value \f$ p(x) \f$
+    //! \param[out] dp the value \f$ p'(x) \f$
+    //! \return the number of sign variations
+    //!
     virtual
     int_type
     eval(
@@ -156,22 +159,22 @@ namespace opoly {
       reference       dp
     ) const = 0;
 
-    /*!
-     * Evaluate the Sturm sequence
-     *
-     * \param[in]  n the degree of the polynomial
-     * \param[in]  x the value at which the polynomial is evaluated
-     * \param[out] pvec the sequence \f$ p_0(x) \f$,  \f$ p_1(x) \f$, ...,  \f$ p_n(x) \f$ of the 3 term recurrence
-     * \return the number of sign variations
-     */
+    //!
+    //! Evaluate the Sturm sequence
+    //!
+    //! \param[in]  n the degree of the polynomial
+    //! \param[in]  x the value at which the polynomial is evaluated
+    //! \param[out] pvec the sequence \f$ p_0(x) \f$,  \f$ p_1(x) \f$, ...,  \f$ p_n(x) \f$ of the 3 term recurrence
+    //! \return the number of sign variations
+    //!
     virtual
     int_type
     sequence( int_type n, const_reference x, pointer pvec ) const = 0;
 
-    /*!
-     * Weight function of the orthogonal polynomial
-     * \param[in]  x  the value at which the weight is evaluated
-     */
+    //!
+    //! Weight function of the orthogonal polynomial
+    //! \param[in]  x  the value at which the weight is evaluated
+    //!
     virtual
     real_type
     weight( const_reference x ) const = 0;
@@ -180,12 +183,12 @@ namespace opoly {
 
   // * * * * * * * * * * * * * * JACOBI * * * * * * * * * * * * * * * * * * *
 
-  /*!
-   * Class defining the Jacobi orthogonal polynomial
-   *
-   * - INT  is a integer type, can be also unsigned
-   * - REAL is a floating point type, can be float or a high precision number class
-   */
+  //!
+  //! Class defining the Jacobi orthogonal polynomial
+  //!
+  //! - INT  is a integer type, can be also unsigned
+  //! - REAL is a floating point type, can be float or a high precision number class
+  //!
   template <typename INT, typename REAL>
   class Jacobi : public poly<INT,REAL> {
   public:
@@ -198,15 +201,24 @@ namespace opoly {
   public:
 
     Jacobi( const_reference _alpha, const_reference _beta )
-    : alpha(_alpha),
-      beta(_beta),
-      ab(_alpha+_beta),
-      a2b2(_alpha*_alpha-_beta*_beta)
+    : alpha(_alpha)
+    , beta(_beta)
+    , ab(_alpha+_beta)
+    , a2b2(_alpha*_alpha-_beta*_beta)
     { }
 
-    /*!
-     * Setup the orthogonal polynomial of Jacobi
-     */
+    Jacobi( Jacobi<INT,REAL> const * ptr )
+    : alpha(ptr->alpha)
+    , beta(ptr->beta)
+    , ab(ptr->ab)
+    , a2b2(ptr->a2b2)
+    { }
+
+    string type() const override { return "jacobi"; }
+
+    //!
+    //! Setup the orthogonal polynomial of Jacobi
+    //!
     void
     setup( const_reference _alpha, const_reference _beta ) {
       alpha = _alpha;
@@ -363,12 +375,12 @@ namespace opoly {
 
   // * * * * * * * * * * * * * * LEGENDRE * * * * * * * * * * * * * * * * * * *
 
-  /*!
-   * Class defining the Legendre orthogonal polynomial
-   *
-   * - INT  is a integer type, can be also unsigned
-   * - REAL is a floating point type, can be float or a high precision number class
-   */
+  //!
+  //! Class defining the Legendre orthogonal polynomial
+  //!
+  //! - INT  is a integer type, can be also unsigned
+  //! - REAL is a floating point type, can be float or a high precision number class
+  //!
 
   template <typename INT, typename REAL>
   class Legendre : public poly<INT,REAL> {
@@ -376,6 +388,10 @@ namespace opoly {
     OPOLY_TYPES(INT,REAL);
 
     Legendre() {}
+
+    Legendre( Legendre<INT,REAL> const * ) {}
+
+    string type() const override { return "legendre"; }
 
     real_type
     operator () ( int_type n, const_reference x ) const override {
@@ -488,18 +504,22 @@ namespace opoly {
 
   // * * * * * * * * * * * * * * CHEBYSHEV * * * * * * * * * * * * * * * * * * *
 
-  /*!
-   * Class defining the Chebyshev orthogonal polynomial
-   *
-   * - INT  is a integer type, can be also unsigned
-   * - REAL is a floating point type, can be float or a high precision number class
-   */
+  //!
+  //! Class defining the Chebyshev orthogonal polynomial
+  //!
+  //! - INT  is a integer type, can be also unsigned
+  //! - REAL is a floating point type, can be float or a high precision number class
+  //!
   template <typename INT, typename REAL>
   class Chebyshev : public poly<INT,REAL> {
   public:
     OPOLY_TYPES(INT,REAL);
 
     Chebyshev() {}
+
+    Chebyshev( Chebyshev<INT,REAL> const * ) {}
+
+    string type() const override { return "chebyshev"; }
 
     real_type
     operator () ( int_type n, const_reference x ) const override {
@@ -593,12 +613,12 @@ namespace opoly {
 
   // * * * * * * * * * * * * * * LAGUERRE * * * * * * * * * * * * * * * * * * *
 
-  /*!
-   * Class defining the Laguerre orthogonal polynomial
-   *
-   * - INT  is a integer type, can be also unsigned
-   * - REAL is a floating point type, can be float or a high precision number class
-   */
+  //!
+  //! Class defining the Laguerre orthogonal polynomial
+  //!
+  //! - INT  is a integer type, can be also unsigned
+  //! - REAL is a floating point type, can be float or a high precision number class
+  //!
 
   template <typename INT, typename REAL>
   class Laguerre : public poly<INT,REAL> {
@@ -609,7 +629,12 @@ namespace opoly {
     real_type alpha;
 
   public:
+
     Laguerre( real_type _alpha ) : alpha(_alpha) { }
+
+    Laguerre( Laguerre<INT,REAL> const * ptr ) : alpha(ptr->alpha) { }
+
+    string type() const override { return "laguerre"; }
 
     real_type
     operator () ( int_type n, const_reference x ) const override {
@@ -721,12 +746,12 @@ namespace opoly {
 
   // * * * * * * * * * * * * * * HERMITE * * * * * * * * * * * * * * * * * * *
 
-  /*!
-   * Class defining the Hermite orthogonal polynomial
-   *
-   * - INT  is a integer type, can be also unsigned
-   * - REAL is a floating point type, can be float or a high precision number class
-   */
+  //!
+  //! Class defining the Hermite orthogonal polynomial
+  //!
+  //! - INT  is a integer type, can be also unsigned
+  //! - REAL is a floating point type, can be float or a high precision number class
+  //!
 
   template <typename INT, typename REAL>
   class Hermite : public poly<INT,REAL> {
@@ -734,6 +759,10 @@ namespace opoly {
     OPOLY_TYPES(INT,REAL);
 
     Hermite() {}
+
+    Hermite( Hermite<INT,REAL> const *) { }
+
+    string type() const override { return "hermite"; }
 
     real_type
     operator () ( int_type n, const_reference x ) const override {
@@ -830,12 +859,12 @@ namespace opoly {
 
   // * * * * * * * * * * * * * * ZEROS * * * * * * * * * * * * * * * * * * *
 
-  /*!
-   * Class computeing the zeros of an orthogonal polynomial
-   *
-   * - INT  is a integer type, can be also unsigned
-   * - REAL is a floating point type, can be float or a high precision number class
-   */
+  //! 
+  //! Class computeing the zeros of an orthogonal polynomial
+  //! 
+  //! - INT  is a integer type, can be also unsigned
+  //! - REAL is a floating point type, can be float or a high precision number class
+  //! 
 
   template <typename INT, typename REAL>
   class zeros {
